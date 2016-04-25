@@ -45,6 +45,8 @@ alias cconf='vim ~/.config/compton.conf'
 alias emacs="printf \"don't use that silly\""
 alias wifiref="sudo netctl restart netgear57"
 alias xref="xrdb ~/.Xresources"
+alias :q="exit"
+alias :wq="exit"
 
 # make git work
 gitplz() {
