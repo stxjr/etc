@@ -5,8 +5,15 @@ settings = {
     theme = "lines.theme";
     bell_beeps = "no";
     timestamps = "yes";
-    completion_char = ",";
+    completion_char = ":";
   };
 };
 
-statusbar = { default = { window_inact = { disabled = "yes"; }; }; };
+statusbar = { default = { window_inact = { disabled = "no"; }; }; };
+aliases = {
+  laughtrack = "/me plays the #nixers sitcom's laugh track";
+  kekl = "/exec -o toilet -f future kekl";
+  rainbowkekl = "/exec -o toilet -f future --gay --irc kekl";
+};
+chatnets = { unix = { type = "IRC"; }; };
+channels = ( { name = "#nixers"; chatnet = "unix"; autojoin = "yes"; } );

@@ -54,11 +54,11 @@ abstracts = {
 
   ban = "$*";
 
-  msgnick = "%r$0%w$1 %r│ %r";
-  ownmsgnick = "%r$0%w$1 %r│ ";
+  msgnick = "%r$0%w$1 %r│ %|";
+  ownmsgnick = "{msgnick $0 $1-}";
   ownnick = "%K$*%r";
+  pubmsgnick = "{msgnick $0 $1-}";
   pubnick = "%K$*%r";
-  msgpubnick = "%r$0%w$1 %r│ %r";
   menick = "%K$*%r";
 
   # generic one that's used by most actions
@@ -126,7 +126,7 @@ abstracts = {
   topicsbstart = "%w$C %r┄─┄$*";
   topicsbend = "$*";
 
-  prompt = " %r└──┄┄%n ";
+  prompt = " %r└──┄┄ ";
 
   sb = "";
   #sb = "%N$*%N ";

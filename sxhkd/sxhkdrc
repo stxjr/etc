@@ -7,7 +7,7 @@ alt + Return
 	urxvt -g 80x24+423+220
 
 alt + shift + Return
-	urxvt -g 80x24+423+220 -e "tmux"
+	urxvt -g 80x24+423+220 -e "screen -r"
 
 # program launcher
 alt + r
@@ -35,6 +35,9 @@ super + {_,shift + }w
 
 Print
     scrot.sh
+
+alt + b
+    test -n "$(pidof lemonbar)" && (pkill lemonbar; bspc config top_padding 0) || (bar.sh; bspc config top_padding 30)
 
 #
 # bspwm hotkeys
@@ -97,6 +100,9 @@ alt + shift + equal
 # focus/move window to desktop
 alt + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}'
+
+alt + {_,shift + } grave
+    bspc {desktop -f,node -d} '^5'
 
 alt + {_,shift + }{F1,F2,F3,F4}
 	bspc {desktop -f,node -d} '^{5,6,7,8}'

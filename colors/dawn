@@ -1,0 +1,40 @@
+! sakura by fuyuki
+
+! special
+*.foreground:   #525252
+*.background:   #e8e8ea
+*.cursorColor:  #aaaaaa
+
+! black
+*.color0:       #707070
+*.color8:       #909090
+
+! red
+*.color1:       #cf4c66
+*.color9:       #e03b5b
+
+! green
+*.color2:       #4ccf74
+*.color10:      #3be06e
+
+! yellow
+*.color3:       #d7af44
+*.color11:      #e8b733
+
+! blue
+*.color4:       #4694c9
+*.color12:      #3498db
+
+! magenta
+*.color5:       #6868bf
+*.color13:      #5757d0
+
+! cyan
+*.color6:       #5dbeaa
+*.color14:      #4ccfb5
+
+! white
+*.color7:       #aaaaaa
+*.color15:      #c2c2c2
+
+! vim: ft=xdefaults
