@@ -56,7 +56,7 @@ abstracts = {
 
   msgnick = "%r$0%w$1 %r│ %|";
   ownmsgnick = "{msgnick $0 $1-}";
-  ownnick = "%K$*%r";
+  ownnick = "%r$*%r";
   pubmsgnick = "{msgnick $0 $1-}";
   pubnick = "%K$*%r";
   menick = "%K$*%r";
