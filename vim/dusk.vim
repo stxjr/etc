@@ -55,11 +55,11 @@ hi Comment                cterm=NONE             ctermbg=NONE  ctermfg=8
 hi Todo                   cterm=NONE             ctermbg=NONE  ctermfg=1
 
 hi Constant               cterm=NONE             ctermbg=NONE  ctermfg=1
-hi Operator               cterm=NONE             ctermbg=NONE  ctermfg=7
+hi Operator               cterm=NONE             ctermbg=NONE  ctermfg=8
 hi Special                cterm=NONE             ctermbg=NONE  ctermfg=8
-hi Identifier             cterm=NONE             ctermbg=NONE  ctermfg=0
+hi Identifier             cterm=NONE             ctermbg=NONE  ctermfg=8
 hi Statement              cterm=NONE             ctermbg=NONE  ctermfg=1
-hi PreProc                cterm=NONE             ctermbg=NONE  ctermfg=7
+hi PreProc                cterm=NONE             ctermbg=NONE  ctermfg=8
 hi Type                   cterm=NONE             ctermbg=NONE  ctermfg=8
-hi Define                 cterm=NONE             ctermbg=NONE  ctermfg=15
+hi Define                 cterm=NONE             ctermbg=NONE  ctermfg=8
 hi Function               cterm=NONE             ctermbg=NONE  ctermfg=1

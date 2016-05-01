@@ -1,0 +1,31 @@
+#include ".colors/dusk"
+
+! set the font
+URxvt.font: -fuyuki-tangerine-*-*-*-*-*-*-*-*-*-*-*-*, -*-siji-*-*-*-*-10-*-*-*-*-*-*-*
+URxvt.letterSpace: 1
+
+! no bold fonts for you
+URxvt*boldFont: 
+URxvt*italicFont: 
+URxvt*bolditalicFont: 
+
+! increase line spacing
+URxvt*lineSpace: 2
+
+! disable scrollbar
+URxvt.scrollBar: false
+
+! set urxvt as login shell
+URxvt*loginShell: false
+
+! set terminal padding
+URxvt.internalBorder: 20
+
+! set cursor blinking
+URxvt.cursorBlink: 1
+
+! set bell
+URxvt.urgentOnBell: true
+
+! size of cursor
+Xcursor.size: 16
