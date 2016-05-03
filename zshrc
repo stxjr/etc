@@ -3,8 +3,8 @@
 #
 
 # set zsh options
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zhistory
 setopt PROMPT_CR
 setopt PROMPT_SP
@@ -43,19 +43,20 @@ alias xconf='vim ~/.Xresources'
 alias vconf='vim ~/.vimrc'
 alias cconf='vim ~/.config/compton.conf'
 alias emacs="printf \"don't use that silly\""
+alias nano="printf \"what are you, a pleb?\""
 alias wifiref="sudo netctl restart netgear57"
 alias xref="xrdb ~/.Xresources"
 alias :q="exit"
 alias :wq="exit"
 
 # make git work
-gitplz() {
+gitplz()
+{
     git add --all && git commit -m $1 && git push -u origin master
 }
 
 # set prompt
 PROMPT='%F{red}%~ >%f '
-RPROMPT=''
 
 # PROMPT='%F{red}──%f '
 # RPROMPT='%F{red}%~%f '

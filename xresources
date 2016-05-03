@@ -1,4 +1,4 @@
-#include ".colors/dusk"
+#include ".colors/dawn"
 
 ! set the font
 URxvt.font: -fuyuki-tangerine-*-*-*-*-*-*-*-*-*-*-*-*, -*-siji-*-*-*-*-10-*-*-*-*-*-*-*
