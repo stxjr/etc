@@ -55,6 +55,11 @@ gitplz()
     git add --all && git commit -m $1 && git push -u origin master
 }
 
+fontref()
+{
+    bdftopcf $1.bdf -o $1.pcf && mkfontscale && mkfontdir && xset fp rehash && fc-cache -fv
+}
+
 # set prompt
 PROMPT='%F{red}%~ >%f '
 
