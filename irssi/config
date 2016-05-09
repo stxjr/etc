@@ -1,20 +1,19 @@
 settings = {
-  core = { real_name = "fuyuki"; user_name = "fuyuki"; nick = "fuyuki"; };
+  core = { real_name = "forsythe"; user_name = "sythe"; nick = "sythe"; };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     theme = "lines.theme";
     bell_beeps = "no";
     timestamps = "yes";
-    completion_char = ":";
+    completion_char = ",";
   };
 };
 
 statusbar = { default = { window_inact = { disabled = "no"; }; }; };
 aliases = {
   laughtrack = "/me plays the #unix sitcom's laugh track";
-  trout = "/me slaps $0 around a bit with a large trout";
-  minnow = "/me slaps $0 around quite a bit with a minnow";
-  whale = "/me slaps $0 around a few times with a whale";
+  trout = "/me slaps $0 with a large trout";
+  minnow = "/me slaps $0 around with a minnow";
   kekl = "/exec -o toilet -f future kekl";
   rainbowkekl = "/exec -o toilet -f future --gay --irc kekl";
 };

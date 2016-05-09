@@ -1,4 +1,4 @@
-! dawn by sythe
+! nuthatch by sythe
 
 ! special
 *.foreground:   #525252
@@ -10,28 +10,28 @@
 *.color8:       #909090
 
 ! red
-*.color1:       #cf4c66
-*.color9:       #cf4c66
+*.color1:       #a7586c
+*.color9:       #a7586c
 
 ! green
-*.color2:       #6fbe75
-*.color10:      #6fbe75
+*.color2:       #6ca758
+*.color10:      #6ca758
 
 ! yellow
-*.color3:       #d2a85c
-*.color11:      #d2a85c
+*.color3:       #a79358
+*.color11:      #a79358
 
 ! blue
 *.color4:       #586ca7
 *.color12:      #586ca7
 
 ! magenta
-*.color5:       #6f76be
-*.color13:      #6f76be
+*.color5:       #9358a7
+*.color13:      #9358a7
 
 ! cyan
-*.color6:       #6fbeb7
-*.color14:      #6fbeb7
+*.color6:       #58a793
+*.color14:      #58a793
 
 ! white
 *.color7:       #aaaaaa

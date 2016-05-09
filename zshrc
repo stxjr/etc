@@ -32,7 +32,7 @@ alias n='ncmpcpp'
 alias r='ranger'
 alias i='screen -r'
 alias pac='pacaur --color=auto --noedit'
-alias cmat='cmatrix -C red -an'
+alias cmat='cmatrix -C blue -an'
 alias pacclean='sudo pacaur -R $(sudo pacaur -Qdtq)'
 alias bconf='vim ~/.config/bspwm/bspwmrc'
 alias sconf='vim ~/.config/sxhkd/sxhkdrc'
@@ -61,7 +61,7 @@ fontref()
 }
 
 # set prompt
-PROMPT='%F{red}%~ >%f '
+PROMPT='%F{blue}%~ >%f '
 
-# PROMPT='%F{red}──%f '
-# RPROMPT='%F{red}%~%f '
+# PROMPT='%F{blue}──%f '
+# RPROMPT='%F{blue}%~%f '

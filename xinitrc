@@ -12,19 +12,18 @@ xset +fp /usr/share/fonts/bitmap
 xset fp rehash
 
 # set wallpaper
-hsetroot -fill ~/pics/wall/floral.png
+hsetroot -tile ~/pics/wall/whitetile.png
 
 # start mpd (music)
 mpd &
 
 # compositor for transparency and stuff
-compton -bcC --config ~/.comptonrc --shadow-exclude-reg x30+0+0 &
+compton -bc --config ~/.compton.conf &
+
+# start unclutter (hides mouse when inactive)
+unclutter &
 
 (sleep 3 && bar.sh)
 
 sxhkd &
-(sleep 4 && source ~/.config/bspwm/bspwmrc)
 exec bspwm
-
-#sxhkd -c ~/.config/sxhkd/sxhkdrc_wmutils &
-#exec wew | lad

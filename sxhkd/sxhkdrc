@@ -4,10 +4,10 @@
 
 # terminal emulator
 alt + Return
-	urxvt -g 80x24+423+220
+	urxvt -g 80x24+417+215
 
 alt + shift + Return
-	urxvt -g 80x24+423+220 -e "screen -r"
+	urxvt -g 80x24+417+215 -e "screen -r"
 
 # program launcher
 alt + r
