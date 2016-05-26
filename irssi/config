@@ -9,10 +9,14 @@ settings = {
   };
 };
 
+channels = (
+  { name = "#unix";     chatnet = "unix";  autojoin = "Yes"; },
+);
+
 statusbar = { default = { window_inact = { disabled = "no"; }; }; };
 aliases = {
   laughtrack = "/me plays the #unix sitcom's laugh track";
-  trout = "/me slaps $0 with a large trout";
+  trout = "/me slaps $1 with a large trout";
   minnow = "/me slaps $0 around with a minnow";
   kekl = "/exec -o toilet -f future kekl";
   rainbowkekl = "/exec -o toilet -f future --gay --irc kekl";

@@ -12,18 +12,17 @@ xset +fp /usr/share/fonts/bitmap
 xset fp rehash
 
 # set wallpaper
-hsetroot -tile ~/pics/wall/whitetile.png
+hsetroot -fill ~/pics/wall/redforest.jpg
 
 # start mpd (music)
 mpd &
 
 # compositor for transparency and stuff
-compton -bc --config ~/.compton.conf &
+#compton &
 
 # start unclutter (hides mouse when inactive)
-unclutter &
+unclutter -idle 1 &
 
-(sleep 3 && bar.sh)
-
+bar.sh
 sxhkd &
-exec bspwm
+exec 2bwm

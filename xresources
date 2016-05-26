@@ -1,8 +1,8 @@
-#include ".colors/nuthatch"
+#include ".colors/creamsicle"
 
 ! set the font
-URxvt.font: -fuyuki-tangerine-*-*-*-*-*-*-*-*-*-*-*-*, -*-siji-*-*-*-*-10-*-*-*-*-*-*-*
-URxvt.letterSpace: 1
+URxvt.font: -fuyuki-tangerine-*-*-*-*-*-*-*-*-*-*-*-*, -*-siji-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.letterSpace: 0
 
 ! no bold fonts for you
 URxvt*boldFont: 
@@ -10,7 +10,7 @@ URxvt*italicFont:
 URxvt*bolditalicFont: 
 
 ! increase line spacing
-URxvt*lineSpace: 2
+URxvt*lineSpace: 1
 
 ! disable scrollbar
 URxvt.scrollBar: false
@@ -23,9 +23,3 @@ URxvt.internalBorder: 20
 
 ! set cursor blinking
 URxvt.cursorBlink: 1
-
-! set bell
-URxvt.urgentOnBell: true
-
-! size of cursor
-Xcursor.size: 16

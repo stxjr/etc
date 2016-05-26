@@ -1,4 +1,4 @@
-! dawn by sythe
+! creamsicle by sythe
 
 ! special
 *.foreground:   #707070
@@ -14,27 +14,27 @@
 *.color9:       #cf4c66
 
 ! green
-*.color2:       #6fbe75
-*.color10:      #6fbe75
+*.color2:       #91d581
+*.color10:      #91d581
 
 ! yellow
-*.color3:       #d2a85c
-*.color11:      #d2a85c
+*.color3:       #ebb064
+*.color11:      #ebb064
 
 ! blue
-*.color4:       #586ca7
-*.color12:      #586ca7
+*.color4:       #859cda
+*.color12:      #859cda
 
 ! magenta
-*.color5:       #6f76be
-*.color13:      #6f76be
+*.color5:       #9985da
+*.color13:      #9985da
 
 ! cyan
-*.color6:       #6fbeb7
-*.color14:      #6fbeb7
+*.color6:       #72c1c1
+*.color14:      #72c1c1
 
 ! white
 *.color7:       #aaaaaa
-*.color15:      #c2c2c2
+*.color15:      #bbbbbb
 
 ! vim: ft=xdefaults

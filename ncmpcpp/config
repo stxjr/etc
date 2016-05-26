@@ -1,34 +1,44 @@
+# mpd
 mpd_music_dir = ~/music
 
-colors_enabled = yes
 cyclic_scrolling = yes
 playlist_disable_highlight_delay = "1"
-#progressbar_look = "▉▉▉"
-progressbar_look = "━━━"
-progressbar_boldness = "no"   
-progressbar_color = "white"
-progressbar_elapsed_color = "blue"
 header_visibility = "no"
 statusbar_visibility = "yes"
-song_status_format = "{$5%t $1- %b}|{%f}"
-song_list_format = "$5 {%b}|{%f} - %t $R%l "
 playlist_display_mode = "classic"
-alternative_header_second_line_format = "$1%b"
-now_playing_prefix = ">"
-now_playing_suffix = "<"
-# now_playing_prefix = "$5>"
-# now_playing_suffix = "$5<"
 mouse_support = "no"
 titles_visibility = "no"
-color1 = "white"
-color2 = "blue"
 
-# Visualizer ..
+# formats
+song_status_format = "{$2%t {$8by %a} {$8in %b}}|{%f}"
+#song_list_format = "$2 {%b}|{%f} - %t $R%l "
+song_list_format = "$2 %t{ $8by %a}|{ $8in %b} $R$2%l "
+alternative_header_second_line_format = "$1%b"
+now_playing_prefix = "$8>"
+now_playing_suffix = "$8<"
+
+# progress bar
+progressbar_look = "ùùù"
+# progressbar_look = "━━━"
+progressbar_boldness = "no"   
+progressbar_color = "white"
+progressbar_elapsed_color = "red"
+
+# colors
+colors_enabled = yes
+empty_tag_color = "red"
+statusbar_color = "white"
+state_line_color = "white"
+state_flags_color = "red"
+main_window_color = "red" 
+header_window_color = "black"
+main_window_highlight_color = "white"
+
+# visualizer
 visualizer_in_stereo = "yes"
 visualizer_sync_interval = "30"
 visualizer_output_name = "Pipe"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_type = "spectrum"
-visualizer_color = "white,blue"
-#visualizer_look = "┃┃"
+visualizer_color = "red,white"
 visualizer_look = "┃┃"

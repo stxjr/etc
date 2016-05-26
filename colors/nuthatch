@@ -1,7 +1,7 @@
 ! nuthatch by sythe
 
 ! special
-*.foreground:   #525252
+*.foreground:   #707070
 *.background:   #e8e8ea
 *.cursorColor:  #aaaaaa
 
@@ -22,8 +22,8 @@
 *.color11:      #a79358
 
 ! blue
-*.color4:       #586ca7
-*.color12:      #586ca7
+*.color4:       #6e7ca5
+*.color12:      #6e7ca5
 
 ! magenta
 *.color5:       #9358a7

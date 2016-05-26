@@ -1,6 +1,6 @@
 #!/bin/sh
 
-bspc config border_width        3
+bspc config border_width        4
 bspc config window_gap          35
 bspc config top_padding         30
 bspc config paddingless_monocle true
@@ -8,8 +8,8 @@ bspc config paddingless_monocle true
 # bspc config left_padding        195
 # bspc config right_padding       195
 
-bspc config focused_border_color \#586ca7
-bspc config active_border_color \#586ca7
+bspc config focused_border_color \#cf4c66
+bspc config active_border_color \#cf4c66
 bspc config normal_border_color \#333333
 
 bspc config split_ratio          0.5
