@@ -1,6 +1,6 @@
 # terminal emulator
-alt +{ shift +,_} Return
-    urxvt { -g 80x24+434+212 -fn "-sythe-elian-*-*-*-*-*-*-*-*-*-*-*-*", -g 80x24+454+223}
+alt + {shift + ,_}Return
+    urxvt {-g 80x24+457+226, -g 80x53+457+66}
 
 # program launcher
 alt + r
@@ -24,7 +24,7 @@ alt + F10
 
 # launch web browser
 super + {_,shift + }w
-    light {_, --private-window}
+    firefox {_, --private-window}
 
 Print
     scrot.sh

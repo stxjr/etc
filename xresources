@@ -1,7 +1,7 @@
-#include ".colors/creamsicle"
+#include ".colors/mono"
 
 ! set the font
-URxvt.font: -fuyuki-tangerine-*-*-*-*-*-*-*-*-*-*-*-*, -*-siji-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.font: -sythe-tangerine-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt.letterSpace: 0
 
 ! no bold fonts for you

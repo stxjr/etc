@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {0,0,0,0};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#cf4c66","#cccccc","#cccccc","#cccccc","#cccccc","#e8e8ea","#cccccc"};
+static const char *colors[] = {"#444444","#222222","#2c2c2c","#2c2c2c","#2c2c2c","#333333","#2c2c2c"};
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  */
@@ -35,7 +35,7 @@ static const bool inverted_colors = true;
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size    
  *3) Resize border size  */
-static const uint8_t borders[] = {3,9,7,8};
+static const uint8_t borders[] = {2,6,4,5};
 /* Windows that won't have a border.*/
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"xclock"};
@@ -122,9 +122,9 @@ static key keys[] = {
     {  MOD ,              XK_Home,       resizestep_aspect, {.i=0}},
     {  MOD ,              XK_End,        resizestep_aspect, {.i=1}},
     // Full screen window without borders
-    {  MOD ,              XK_x,         maximize,          {.i=0}},
+    {  MOD ,              XK_f,         maximize,          {.i=0}},
     //Full screen window without borders overiding offsets
-    {  MOD |SHIFT ,       XK_x,          maximize,          {.i=1}},
+    {  MOD |SHIFT ,       XK_f,          maximize,          {.i=1}},
     // Maximize vertically
     {  MOD ,              XK_m,          maxvert_hor,       {.i=1}},
     // Maximize horizontally
@@ -164,7 +164,7 @@ static key keys[] = {
     // Make the window appear always on top
     {  MOD,               XK_t,          always_on_top,     {.i=0}},
     // Make the window stay on all workspaces
-    {  MOD ,              XK_f,          fix,               {.i=0}},
+    {  MOD ,              XK_s,          fix,               {.i=0}},
     // Move the cursor
     {  MOD ,              XK_Up,         cursor_move,       {.i=4}},
     {  MOD ,              XK_Down,       cursor_move,       {.i=5}},

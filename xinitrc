@@ -12,7 +12,7 @@ xset +fp /usr/share/fonts/bitmap
 xset fp rehash
 
 # set wallpaper
-hsetroot -fill ~/pics/wall/redforest.jpg
+hsetroot -tile ~/pics/wall/blacktile.png
 
 # start mpd (music)
 mpd &

@@ -7,7 +7,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "dawn"
+let colors_name = "dusk"
 
 " grey = 0
 " light grey = 8
@@ -51,7 +51,7 @@ hi TabLineSel             cterm=NONE             ctermbg=236   ctermfg=1
 hi MachParen              cterm=NONE             ctermbg=8     ctermfg=NONE
 
 " syntax highlighting
-hi Comment                cterm=NONE             ctermbg=NONE  ctermfg=8
+hi Comment                cterm=NONE             ctermbg=NONE  ctermfg=2
 hi Todo                   cterm=NONE             ctermbg=NONE  ctermfg=1
 
 hi Constant               cterm=NONE             ctermbg=NONE  ctermfg=1
