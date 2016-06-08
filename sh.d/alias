@@ -1,0 +1,24 @@
+#!/bin/sh
+# set aliases
+
+alias l='ls --color'
+alias la='ls -a --color'
+alias ll='ls -lh --color'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../.."
+alias v='vim'
+alias f='vim -c ":CtrlP"'
+alias c='clear'
+alias n='ncmpcpp'
+alias r='ranger'
+alias i='screen -r'
+alias p="pwd | sed \"s:/home/$USER:~:g\""
+alias t="vim ~/var/todo"
+alias xref="xrdb ~/.Xresources"
+alias ca='cava'
+alias pac='pacaur --color=auto --noedit'
+alias cmat='cmatrix -C red -an'
+alias pacclean='sudo pacaur -R $(sudo pacaur -Qdtq)'
+alias screenf="screenfetch -c1,5 -d '-gpu'"

@@ -1,0 +1,61 @@
+#!/bin/sh
+# functions
+
+autogit()
+{
+    git add --all && git commit -m $1 && git push -u origin master
+}
+
+autofont()
+{
+    bdftopcf $1.bdf -o $1.pcf && \
+        mkfontscale && \
+        mkfontdir && \
+        xset fp rehash && \
+        fc-cache -fv
+}
+
+conf()
+{
+    case $1 in
+        vim|v) $EDITOR ~/.vimrc ;;
+        zsh|z) $EDITOR ~/.zshrc ;;
+        ncmpcpp|n) $EDITOR ~/.ncmpcpp/config ;;
+        xrdb|x) $EDITOR ~/.Xresources ;;
+        sxhkd|sxhkdrc|s) $EDITOR ~/.config/sxhkd/sxhkdrc ;;
+        w|weechat) $EDITOR ~/.weechat/weechat.conf ;;
+        2bwm|2) cd ~/src/2bwm && $EDITOR config.h ;;
+    esac
+}
+
+src()
+{
+    case $1 in
+        vim|v) source ~/.vimrc ;;
+        shell|sh|s) source ~/.mkshrc ;;
+        xrdb|x) xrdb ~/.Xresources ;;
+        sxhkd|sxhkdrc|s) source ~/.config/sxhkd/sxhkdrc ;;
+        2bwm|2) cd ~/src/2bwm && make && sudo make install ;;
+    esac
+}
+
+extract()
+{
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2) tar xvjf $1 ;;
+            *.tar.gz) tar xvzf $1 ;;
+            *.bz2) bunzip2 $1 ;;
+            *.gz) gunzip $1 ;;
+            *.tar) tar xvf $1 ;;
+            *.tbz2) tar xvjf $1 ;;
+            *.tgz) tar xvzf $1 ;;
+            *.xz) unxz $1 ;;
+            *.zip) unzip $1 ;;
+            *.Z) uncompress $1 ;;
+            *) echo 'cannot be extracted' ;;
+        esac
+    else
+        echo 'not valid file'
+    fi
+}

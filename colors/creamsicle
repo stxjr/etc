@@ -1,9 +1,8 @@
 ! creamsicle by sythe
 
 ! special
-*.foreground:   #c2c2c2
-*.background:   #222222
-*.cursorColor:  #aaaaaa
+*.foreground:   #2c2c2c
+*.background:   #e8e8ea
 
 ! black
 *.color0:       #707070

@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {0,0,0,0};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#444444","#222222","#2c2c2c","#2c2c2c","#2c2c2c","#333333","#2c2c2c"};
+static const char *colors[] = {"#555555","#222222","#2c2c2c","#2c2c2c","#2c2c2c","#333333","#2c2c2c"};
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  */
@@ -82,7 +82,7 @@ static key keys[] = {
     {  MOD ,              XK_Tab,        focusnext,         {.i=0}},
     {  MOD |SHIFT,        XK_Tab,        focusnext,         {.i=1}},
     // Kill a window
-    {  MOD ,              XK_q,          deletewin,         {.i=0}},
+    {  MOD |SHIFT,        XK_c,          deletewin,         {.i=0}},
     // Resize a window
     {  MOD |SHIFT,        XK_k,          resizestep,        {.i=2}},
     {  MOD |SHIFT,        XK_j,          resizestep,        {.i=1}},
@@ -138,54 +138,54 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_b,          maxhalf,           {.i=-1}},
     // horizontally right
     {  MOD |SHIFT,        XK_n,          maxhalf,           {.i=-2}},
-    //fold half vertically
-    {  MOD |SHIFT|CONTROL,XK_y,          maxhalf,           {.i=4}},
-    //fold half horizontally
-    {  MOD |SHIFT|CONTROL,XK_b,          maxhalf,           {.i=-4}},
-    //unfold vertically
-    {  MOD |SHIFT|CONTROL,XK_u,          maxhalf,           {.i=3}},
-    //unfold horizontally
-    {  MOD |SHIFT|CONTROL,XK_n,          maxhalf,           {.i=-3}},
-    // Next/Previous screen
-    {  MOD ,              XK_comma,      changescreen,      {.i=1}},
-    {  MOD ,              XK_period,     changescreen,      {.i=0}},
-    // Raise or lower a window
-    {  MOD |SHIFT ,       XK_r,          raiseorlower,      {.i=0}},
-    // Next/Previous workspace
-    {  MOD ,              XK_v,          nextworkspace,     {.i=0}},
-    {  MOD ,              XK_c,          prevworkspace,     {.i=0}},
-    // Move to Next/Previous workspace
-    {  MOD |SHIFT ,       XK_v,          sendtonextworkspace,{.i=0}},
-    {  MOD |SHIFT ,       XK_c,          sendtoprevworkspace,{.i=0}},
-    // Iconify the window
-    {  MOD ,              XK_i,          hide,              {.i=0}},
-    // Make the window unkillable
-    {  MOD ,              XK_a,          unkillable,        {.i=0}},
-    // Make the window appear always on top
-    {  MOD,               XK_t,          always_on_top,     {.i=0}},
-    // Make the window stay on all workspaces
-    {  MOD ,              XK_s,          fix,               {.i=0}},
-    // Move the cursor
-    {  MOD ,              XK_Up,         cursor_move,       {.i=4}},
-    {  MOD ,              XK_Down,       cursor_move,       {.i=5}},
-    {  MOD ,              XK_Right,      cursor_move,       {.i=6}},
-    {  MOD ,              XK_Left,       cursor_move,       {.i=7}},
-    // Move the cursor faster
-    {  MOD |SHIFT,        XK_Up,         cursor_move,       {.i=0}},
-    {  MOD |SHIFT,        XK_Down,       cursor_move,       {.i=1}},
-    {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=2}},
-    {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=3}},
+    // //fold half vertically
+    // {  MOD |SHIFT|CONTROL,XK_y,          maxhalf,           {.i=4}},
+    // //fold half horizontally
+    // {  MOD |SHIFT|CONTROL,XK_b,          maxhalf,           {.i=-4}},
+    // //unfold vertically
+    // {  MOD |SHIFT|CONTROL,XK_u,          maxhalf,           {.i=3}},
+    // //unfold horizontally
+    // {  MOD |SHIFT|CONTROL,XK_n,          maxhalf,           {.i=-3}},
+    // // Next/Previous screen
+    // {  MOD ,              XK_comma,      changescreen,      {.i=1}},
+    // {  MOD ,              XK_period,     changescreen,      {.i=0}},
+    // // Raise or lower a window
+    // {  MOD |SHIFT ,       XK_r,          raiseorlower,      {.i=0}},
+    // // Next/Previous workspace
+    // {  MOD ,              XK_v,          nextworkspace,     {.i=0}},
+    // {  MOD ,              XK_c,          prevworkspace,     {.i=0}},
+    // // Move to Next/Previous workspace
+    // {  MOD |SHIFT ,       XK_v,          sendtonextworkspace,{.i=0}},
+    // {  MOD |SHIFT ,       XK_c,          sendtoprevworkspace,{.i=0}},
+    // // Iconify the window
+    // {  MOD ,              XK_i,          hide,              {.i=0}},
+    // // Make the window unkillable
+    // {  MOD ,              XK_a,          unkillable,        {.i=0}},
+    // // Make the window appear always on top
+    // {  MOD,               XK_t,          always_on_top,     {.i=0}},
+    // // Make the window stay on all workspaces
+    // {  MOD ,              XK_s,          fix,               {.i=0}},
+    // // Move the cursor
+    // {  MOD ,              XK_Up,         cursor_move,       {.i=4}},
+    // {  MOD ,              XK_Down,       cursor_move,       {.i=5}},
+    // {  MOD ,              XK_Right,      cursor_move,       {.i=6}},
+    // {  MOD ,              XK_Left,       cursor_move,       {.i=7}},
+    // // Move the cursor faster
+    // {  MOD |SHIFT,        XK_Up,         cursor_move,       {.i=0}},
+    // {  MOD |SHIFT,        XK_Down,       cursor_move,       {.i=1}},
+    // {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=2}},
+    // {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=3}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
-    {  MOD ,              XK_space,      halfandcentered,   {.i=0}},
+    // {  MOD ,              XK_space,      halfandcentered,   {.i=0}},
     // Fake clicks using xdotool
-    {  MOD |CONTROL,      XK_Up,         start,             {.com = click1}},
-    {  MOD |CONTROL,      XK_Down,       start,             {.com = click2}},
-	{  MOD |CONTROL,      XK_Right,      start,             {.com = click3}},
-	{  MOD ,              XK_KP_Add,start,             {.com = vol_up}},
-	{  MOD ,              XK_KP_Divide,  start,             {.com = vol_down}},
-	{  MOD ,              XK_KP_Subtract,start,             {.com = vol_mute}},
+    // {  MOD |CONTROL,      XK_Up,         start,             {.com = click1}},
+    // {  MOD |CONTROL,      XK_Down,       start,             {.com = click2}},
+	// {  MOD |CONTROL,      XK_Right,      start,             {.com = click3}},
+	// {  MOD ,              XK_KP_Add,start,             {.com = vol_up}},
+	// {  MOD ,              XK_KP_Divide,  start,             {.com = vol_down}},
+	// {  MOD ,              XK_KP_Subtract,start,             {.com = vol_mute}},
 //    {  MOD |CONTROL,      XK_Up,         cursor_press,        {.i = 1}},
 //    {  MOD |CONTROL,      XK_Down,       cursor_press,        {.i = 2}},
 //    {  MOD |CONTROL,      XK_Right,      cursor_press,        {.i = 3}},

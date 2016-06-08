@@ -1,0 +1,35 @@
+# simple config for any wm
+
+# spawn terminal
+alt + {shift + ,_}Return
+    urxvt {-g 80x24+457+226, -g 80x53+457+66}
+
+# program launcher
+alt + r
+    dmenu.sh
+
+# reload sxhkd
+alt + Escape
+    pkill -USR1 -x sxhkd
+
+# volume
+alt + F7
+    amixer -q sset Master 5%- unmute
+
+alt + F8
+    amixer -q sset Master 5%+ unmute
+
+# music
+alt + F{9,11}
+    mpc {prev,next}
+
+alt + F10
+    mpc toggle
+
+# launch web browser
+super + {_,shift + }w
+    firefox {_, --private-window}
+
+# take a scrot
+Print
+    scrot.sh

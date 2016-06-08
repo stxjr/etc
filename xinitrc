@@ -3,26 +3,21 @@
 # load Xresources
 xrdb ~/.Xresources
 
-# adjust screen temperature
-redshift -o -l 0:0 -m randr -t 5250:5250
-
 # load fonts
 xset +fp ~/.fonts
 xset +fp /usr/share/fonts/bitmap
 xset fp rehash
 
 # set wallpaper
-hsetroot -tile ~/pics/wall/blacktile.png
+hsetroot -tile ~/usr/pics/wall/blacktile.png
 
-# start mpd (music)
+# start mpd (music dameon)
 mpd &
-
-# compositor for transparency and stuff
-#compton &
 
 # start unclutter (hides mouse when inactive)
 unclutter -idle 1 &
 
 bar.sh
-sxhkd &
+
+sxhkd -c ~/.config/sxhkd/common &
 exec 2bwm
