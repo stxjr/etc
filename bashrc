@@ -4,6 +4,7 @@
 
 complete -c man which
 complete -cf sudo
+complete -d cd
 
 set -o vi
 
