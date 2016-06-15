@@ -8,15 +8,16 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../.."
-alias v='vim'
-alias f='vim -c ":CtrlP"'
+alias f='nvim -c ":CtrlP"'
 alias c='clear'
 alias n='ncmpcpp'
 alias r='ranger'
-alias i='screen -r'
+alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:/home/$USER:~:g\""
-alias t="vim ~/var/todo"
-alias xref="xrdb ~/.Xresources"
+alias t="todo.sh"
+alias e='$EDITOR'
+# break my habit
+alias rm='rm -i'
 alias ca='cava'
 alias pac='pacaur --color=auto --noedit'
 alias cmat='cmatrix -C red -an'

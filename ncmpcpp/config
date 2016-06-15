@@ -1,3 +1,6 @@
+# mpd
+mpd_music_dir = ~/usr/music
+
 cyclic_scrolling = yes
 playlist_disable_highlight_delay = "1"
 header_visibility = "no"
@@ -7,9 +10,8 @@ mouse_support = "no"
 titles_visibility = "no"
 
 # formats
-song_status_format = "{$2%t {$6by %a} {$6in %b}}|{%f}"
-#song_list_format = "$2 {%b}|{%f} - %t $R%l "
-song_list_format = "$2 %t{ $6by %a}|{ $6in %b} $R$2%l "
+song_status_format = "{$2%t;{$6 %a}|{$6 %b}}|{%f}"
+song_list_format = "{$2 %t;{$6 %a}|{$6 %b} $R$2%l }|{%f $R}"
 alternative_header_second_line_format = "$1%b"
 now_playing_prefix = "$6>"
 now_playing_suffix = "$6<"
@@ -18,18 +20,18 @@ now_playing_suffix = "$6<"
 #progressbar_look = "ùùù"
 progressbar_look = "━━━"
 progressbar_boldness = "no"   
-progressbar_color = "blue"
+progressbar_color = "yellow"
 progressbar_elapsed_color = "red"
 
 # colors
 colors_enabled = yes
 empty_tag_color = "red"
-statusbar_color = "blue"
-state_line_color = "blue"
+statusbar_color = "yellow"
+state_line_color = "yellow"
 state_flags_color = "red"
 main_window_color = "red" 
-header_window_color = "black"
-main_window_highlight_color = "blue"
+header_window_color = "yellow"
+main_window_highlight_color = "yellow"
 
 # visualizer
 visualizer_in_stereo = "yes"
@@ -37,5 +39,5 @@ visualizer_sync_interval = "30"
 visualizer_output_name = "Pipe"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_type = "spectrum"
-visualizer_color = "red,blue"
+visualizer_color = "red,yellow"
 visualizer_look = "┃┃"

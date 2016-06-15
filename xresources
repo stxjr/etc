@@ -1,4 +1,4 @@
-#include ".colors/mono"
+#include ".colors/monol"
 
 ! set the font
 URxvt.font: -sythe-tangerine-*-*-*-*-*-*-*-*-*-*-*-*

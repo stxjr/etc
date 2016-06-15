@@ -3,7 +3,7 @@
 
 autogit()
 {
-    git add --all && git commit -m $1 && git push -u origin master
+    git add --all && git commit -m "$1" && git push -u origin master
 }
 
 autofont()
@@ -19,12 +19,11 @@ conf()
 {
     case $1 in
         vim|v) $EDITOR ~/.vimrc ;;
-        zsh|z) $EDITOR ~/.zshrc ;;
         ncmpcpp|n) $EDITOR ~/.ncmpcpp/config ;;
         xrdb|x) $EDITOR ~/.Xresources ;;
-        sxhkd|sxhkdrc|s) $EDITOR ~/.config/sxhkd/sxhkdrc ;;
+        sxhkd|sxhkdrc|s) $EDITOR ~/.config/sxhkd/common ;;
         w|weechat) $EDITOR ~/.weechat/weechat.conf ;;
-        2bwm|2) cd ~/src/2bwm && $EDITOR config.h ;;
+        2bwm|2) $EDITOR ~/src/pkg/2bwm/config.h
     esac
 }
 
@@ -32,11 +31,18 @@ src()
 {
     case $1 in
         vim|v) source ~/.vimrc ;;
-        shell|sh|s) source ~/.mkshrc ;;
+        shell|sh|s) source ~/.bashrc ;;
         xrdb|x) xrdb ~/.Xresources ;;
-        sxhkd|sxhkdrc|s) source ~/.config/sxhkd/sxhkdrc ;;
-        2bwm|2) cd ~/src/2bwm && make && sudo make install ;;
+        2bwm|2) prev=$(pwd) && \
+            cd ~/src/pkg/2bwm && \
+            make && sudo make install && \
+            cd $prev ;;
     esac
+}
+
+heck()
+{
+    sudo $(fc -nlr | sed 1q)
 }
 
 extract()

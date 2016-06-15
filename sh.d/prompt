@@ -3,10 +3,18 @@
 
 _dir()
 {
-    # replace $HOME with nothing (so just the prompt char)
+    # replace $HOME with nothing (don't show anything)
     currentdir=${PWD/$HOME/}
 
     test -n currentdir && printf "$(basename 2>/dev/null "$currentdir")"
 }
 
-PS1='$(tput setaf 1)$(_dir);$(tput sgr0) '
+_col()
+{
+    case $? in
+        0) printf "$(tput setaf 1)" ;;
+        *) printf "$(tput setaf 3)" ;;
+    esac
+}
+
+PS1='$(_col)$(_dir);$(tput sgr0) '

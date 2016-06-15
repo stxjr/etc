@@ -1,6 +1,5 @@
 #!/bin/sh
 # set environment variables
 
-export PATH=$PATH:~/bin
 export EDITOR=vim
 export VISUAL=$EDITOR

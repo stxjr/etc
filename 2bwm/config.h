@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {0,0,0,0};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#555555","#222222","#2c2c2c","#2c2c2c","#2c2c2c","#333333","#2c2c2c"};
+static const char *colors[] = {"#cf4c66","#999999","#999999","#999999","#999999","#e8e8e8","#999999"};
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  */
@@ -126,9 +126,9 @@ static key keys[] = {
     //Full screen window without borders overiding offsets
     {  MOD |SHIFT ,       XK_f,          maximize,          {.i=1}},
     // Maximize vertically
-    {  MOD ,              XK_m,          maxvert_hor,       {.i=1}},
+    // {  MOD ,              XK_m,          maxvert_hor,       {.i=1}},
     // Maximize horizontally
-    {  MOD |SHIFT,        XK_m,          maxvert_hor,       {.i=0}},
+    // {  MOD |SHIFT,        XK_m,          maxvert_hor,       {.i=0}},
     // Maximize and move
     // vertically left
     {  MOD |SHIFT,        XK_y,          maxhalf,           {.i=2}},
@@ -197,6 +197,7 @@ static key keys[] = {
        DESKTOPCHANGE(     XK_4,                             3)
        DESKTOPCHANGE(     XK_5,                             4)
        DESKTOPCHANGE(     XK_6,                             5)
+       DESKTOPCHANGE(     XK_0,                             6)
 };
 static Button buttons[] = {
     {  MOD        ,XCB_BUTTON_INDEX_1,     mousemotion,   {.i=TWOBWM_MOVE}},

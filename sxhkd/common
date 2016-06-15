@@ -33,3 +33,15 @@ super + {_,shift + }w
 # take a scrot
 Print
     scrot.sh
+
+alt + m
+    pkill popup; popup $(~/bin/bar/mus)
+
+alt + v
+    pkill popup; popup $(~/bin/bar/vol)
+
+alt + p
+    pkill popup; popup $(~/bin/bar/bat)
+
+alt + t
+    pkill popup; popup "$(~/bin/bar/clk)    $(~/bin/bar/dat)"
