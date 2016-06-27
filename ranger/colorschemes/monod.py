@@ -19,7 +19,7 @@ class Default(ColorScheme):
                 fg = red
             if context.border:
                 attr = normal
-                fg = black
+                fg= blue
             if context.media:
                 if context.image:
                     fg = red
@@ -30,7 +30,7 @@ class Default(ColorScheme):
                 fg = red
             if context.directory:
                 attr |= normal
-                fg = black
+                fg= blue
             elif context.executable and not \
                     any((context.media, context.container,
                         context.fifo, context.socket)):
@@ -47,7 +47,7 @@ class Default(ColorScheme):
             if context.tag_marker and not context.selected:
                 attr |= bold
                 if fg in (red, red):
-                    fg = black
+                    fg= blue
                 else:
                     fg = red
             if not context.selected and (context.cut or context.copied):
@@ -69,7 +69,7 @@ class Default(ColorScheme):
             attr |= normal
             if context.hostname:
                 attr |= bold
-                fg = context.bad and red or black
+                fg = context.bad and red or green
             elif context.directory:
                 fg = red
             elif context.tab:
@@ -81,7 +81,7 @@ class Default(ColorScheme):
         elif context.in_statusbar:
             if context.permissions:
                 if context.good:
-                    fg = black
+                    fg= blue
                 elif context.bad:
                     fg = red
             if context.marked:

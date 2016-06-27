@@ -1,5 +1,5 @@
 #!/bin/sh
 # set environment variables
 
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL=$EDITOR

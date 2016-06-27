@@ -1,6 +1,8 @@
 ///---User configurable stuff---///
+
 ///---Modifiers---///
 #define MOD             XCB_MOD_MASK_1       /* Super/Windows key  or check xmodmap(1) with -pm  defined in /usr/include/xcb/xproto.h */
+
 ///--Speed---///
 /* Move this many pixels when moving or resizing with keyboard unless the window has hints saying otherwise.
  *0)move step slow   1)move step fast
@@ -10,27 +12,36 @@ static const uint16_t movements[] = {20,40,15,100};
 static const bool     resize_by_line          = false;
 /* the ratio used when resizing and keeping the aspect */
 static const float    resize_keep_aspect_ratio= 1.03;
+
 ///---Offsets---///
 /*0)offsetx          1)offsety
  *2)maxwidth         3)maxheight */
 static const uint8_t offsets[] = {0,0,0,0};
+
 ///---Colors---///
 /*0)focuscol         1)unfocuscol
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#cf4c66","#999999","#999999","#999999","#999999","#e8e8e8","#999999"};
+
+// dark
+static const char *colors[] = {"#666666","#333333","#555555","#555555","#555555","#222222","#555555"};
+// light
+// static const char *colors[] = {"#cf4c66","#999999","#999999","#999999","#999999","#e8e8e8","#999999"};
+
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  */
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = true;
+
 ///---Cursor---///
 /* default position of the cursor:
  * correct values are:
  * TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, MIDDLE
  * All these are relative to the current window. */
 #define CURSOR_POSITION BOTTOM_RIGHT
+
 ///---Borders---///
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size    
@@ -39,6 +50,7 @@ static const uint8_t borders[] = {2,6,4,5};
 /* Windows that won't have a border.*/
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"xclock"};
+
 ///--Menus and Programs---///
 static const char *menucmd[]   = { "dmenu.sh", NULL };
 static const char *gmrun[]     = { "dmenu.sh",NULL};

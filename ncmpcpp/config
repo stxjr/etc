@@ -11,8 +11,9 @@ titles_visibility = "no"
 
 # formats
 song_status_format = "{$2%t;{$6 %a}|{$6 %b}}|{%f}"
-song_list_format = "{$2 %t;{$6 %a}|{$6 %b} $R$2%l }|{%f $R}"
+song_list_format = "{{$6 %a}|{$6 %b};$2 %t $R$2%l }|{%f $R}"
 alternative_header_second_line_format = "$1%b"
+media_library_primary_tag = "artist"
 now_playing_prefix = "$6>"
 now_playing_suffix = "$6<"
 
@@ -39,5 +40,5 @@ visualizer_sync_interval = "30"
 visualizer_output_name = "Pipe"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_type = "spectrum"
-visualizer_color = "red,yellow"
-visualizer_look = "┃┃"
+visualizer_color = "yellow,red,red"
+visualizer_look = "██"

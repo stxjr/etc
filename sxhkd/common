@@ -4,44 +4,42 @@
 alt + {shift + ,_}Return
     urxvt {-g 80x24+457+226, -g 80x53+457+66}
 
+alt + ctrl + Return
+    urxvt -e /bin/mksh
+
 # program launcher
 alt + r
-    dmenu.sh
+    run
 
 # reload sxhkd
 alt + Escape
     pkill -USR1 -x sxhkd
 
 # volume
-alt + F7
-    amixer -q sset Master 5%- unmute
-
-alt + F8
-    amixer -q sset Master 5%+ unmute
+alt + F{7,8}
+    amixer -q sset Master 5%{-,+} unmute && \
+        barw=100 barx=1216 bary=70 popup $(~/bin/bar/vol)
 
 # music
 alt + F{9,11}
-    mpc {prev,next}
+    mpc {prev,next} && popup $(~/bin/bar/mus)
 
 alt + F10
-    mpc toggle
+    mpc toggle && popup $(~/bin/bar/mus)
 
 # launch web browser
 super + {_,shift + }w
     firefox {_, --private-window}
 
 # take a scrot
-Print
-    scrot.sh
+alt + Print
+    shot
 
 alt + m
     pkill popup; popup $(~/bin/bar/mus)
 
-alt + v
-    pkill popup; popup $(~/bin/bar/vol)
-
 alt + p
-    pkill popup; popup $(~/bin/bar/bat)
+    pkill popup; barw=100 barx=50 bary=70 popup "$(~/bin/bar/bat)"
 
-alt + t
-    pkill popup; popup "$(~/bin/bar/clk)    $(~/bin/bar/dat)"
+alt + v
+    pkill popup; barw=100 barx=1216 bary=70 popup "$(~/bin/bar/vol)"

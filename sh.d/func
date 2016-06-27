@@ -1,11 +1,13 @@
 #!/bin/sh
 # functions
 
+# I'm really lazy
 autogit()
 {
     git add --all && git commit -m "$1" && git push -u origin master
 }
 
+# auto compile fonts
 autofont()
 {
     bdftopcf $1.bdf -o $1.pcf && \
@@ -15,36 +17,51 @@ autofont()
         fc-cache -fv
 }
 
+# quick access to config files
 conf()
 {
     case $1 in
-        vim|v) $EDITOR ~/.vimrc ;;
-        ncmpcpp|n) $EDITOR ~/.ncmpcpp/config ;;
-        xrdb|x) $EDITOR ~/.Xresources ;;
-        sxhkd|sxhkdrc|s) $EDITOR ~/.config/sxhkd/common ;;
-        w|weechat) $EDITOR ~/.weechat/weechat.conf ;;
-        2bwm|2) $EDITOR ~/src/pkg/2bwm/config.h
+        v|vim|nvim)
+            $EDITOR ~/.config/nvim/init.vim ;;
+        ncmpcpp|n)
+            $EDITOR ~/.ncmpcpp/config ;;
+        xrdb|x)
+            $EDITOR ~/.Xresources ;;
+        sxhkd|sxhkdrc|s)
+            $EDITOR ~/.config/sxhkd/common ;;
+        w|weechat)
+            $EDITOR ~/.weechat/weechat.conf ;;
+        t|tmux)
+            $EDITOR ~/.tmux.conf ;;
+        2bwm|2)
+            $EDITOR ~/src/pkg/2bwm/config.h ;;
     esac
 }
 
+# source files and stuff
 src()
 {
     case $1 in
-        vim|v) source ~/.vimrc ;;
-        shell|sh|s) source ~/.bashrc ;;
-        xrdb|x) xrdb ~/.Xresources ;;
-        2bwm|2) prev=$(pwd) && \
+        shell|sh|s)
+            source ~/.bashrc ;;
+        xrdb|x)
+            xrdb ~/.Xresources ;;
+        2bwm|2)
+            prev=$(pwd) && \
             cd ~/src/pkg/2bwm && \
             make && sudo make install && \
             cd $prev ;;
     esac
 }
 
+# just heck it all
 heck()
 {
     sudo $(fc -nlr | sed 1q)
 }
 
+# extract files
+# stolen from arc
 extract()
 {
     if [ -f $1 ]; then

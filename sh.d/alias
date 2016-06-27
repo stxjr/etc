@@ -2,21 +2,19 @@
 # set aliases
 
 alias l='ls --color'
-alias la='ls -a --color'
+alias la='ls -A --color'
 alias ll='ls -lh --color'
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../.."
-alias f='nvim -c ":CtrlP"'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../..'
 alias c='clear'
 alias n='ncmpcpp'
 alias r='ranger'
 alias i='dtach -A /tmp/irc-dtach weechat'
-alias p="pwd | sed \"s:/home/$USER:~:g\""
-alias t="todo.sh"
+alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'
-# break my habit
+alias t="tmux"
 alias rm='rm -i'
 alias ca='cava'
 alias pac='pacaur --color=auto --noedit'
