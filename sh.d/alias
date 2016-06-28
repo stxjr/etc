@@ -14,7 +14,12 @@ alias r='ranger'
 alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'
-alias t="tmux"
+
+alias gita='git add .'
+alias gitc='git commit -m'
+alias gitp='git push -u origin master'
+alias gitt='git add . && git commit -m "<commit>" && git push -u origin master'
+
 alias rm='rm -i'
 alias ca='cava'
 alias pac='pacaur --color=auto --noedit'
