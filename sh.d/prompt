@@ -13,7 +13,7 @@ _col()
 {
     case $? in
         0) printf "$(tput setaf 1)" ;;
-        *) printf "$(tput setaf 5)" ;;
+        *) printf "$(tput setaf 4)" ;;
     esac
 }
 

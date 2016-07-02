@@ -18,7 +18,7 @@ alt + Escape
 # volume
 alt + F{7,8}
     amixer -q sset Master 5%{-,+} unmute && \
-        barw=100 barx=1216 bary=70 popup $(~/bin/bar/vol)
+        panelw=100 panelx=1216 panely=70 popup $(~/bin/bar/vol)
 
 # music
 alt + F{9,11}
@@ -39,7 +39,7 @@ alt + m
     pkill popup; popup $(~/bin/bar/mus)
 
 alt + p
-    pkill popup; barw=100 barx=50 bary=70 popup "$(~/bin/bar/bat)"
+    pkill popup; panelw=100 panelx=50 panely=70 popup "$(~/bin/bar/bat)"
 
 alt + v
-    pkill popup; barw=100 barx=1216 bary=70 popup "$(~/bin/bar/vol)"
+    pkill popup; panelw=100 panelx=1216 panely=70 popup "$(~/bin/bar/vol)"

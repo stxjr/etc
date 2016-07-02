@@ -1,11 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # functions
-
-# I'm really lazy
-autogit()
-{
-    git add --all && git commit -m "$1" && git push -u origin master
-}
 
 # auto compile fonts
 autofont()
@@ -21,7 +15,7 @@ autofont()
 conf()
 {
     case $1 in
-        v|vim|nvim)
+        e|editor)
             $EDITOR ~/.config/nvim/init.vim ;;
         ncmpcpp|n)
             $EDITOR ~/.ncmpcpp/config ;;
@@ -52,6 +46,12 @@ src()
             make && sudo make install && \
             cd $prev ;;
     esac
+}
+
+# ls after cd
+cdl()
+{
+    builtin cd "$@" && ls --color --group-directories-first
 }
 
 # just heck it all

@@ -1,7 +1,7 @@
 #include ".colors/monod"
 
 ! set the font
-URxvt.font: -sythe-tangerine-*-*-*-*-*-*-*-*-*-*-*-*, -*-siji-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.font: -sythe-tangerine-*-*-*-*-*-*-*-*-*-*-*-*
 URxvt.letterSpace: 0
 
 ! no bold fonts for you

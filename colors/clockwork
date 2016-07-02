@@ -1,0 +1,31 @@
+! clockwork
+! by sythe
+
+! special
+*foreground:    #ccbb94
+*background:    #22221a
+*cursorColor:   #999999
+
+*.color0:       #544d43
+*.color8:       #544d43
+
+*.color1:       #61806a
+*.color9:       #61806a
+
+*.color2:       #93744e
+*.color10:      #93744e
+
+*.color3:       #867e79
+*.color11:      #867e79
+
+*.color4:       #a67437
+*.color12:      #a67437
+
+*.color5:       #9f908c
+*.color13:      #9f908c
+
+*.color6:       #ad8d54
+*.color14:      #ad8d54
+
+*.color7:       #a6a89c
+*.color15:      #a6a89c

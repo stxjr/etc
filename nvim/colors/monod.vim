@@ -9,8 +9,8 @@ endif
 
 let colors_name = "monod"
 
-" ui highlighting
-hi Normal                 cterm=NONE             ctermbg=NONE  ctermfg=5
+" ui highlighting {{{
+hi Normal                 cterm=NONE             ctermbg=NONE  ctermfg=1
 hi ColorColumn            cterm=NONE             ctermbg=236   ctermfg=NONE
 hi Cursor                 cterm=NONE             ctermbg=NONE  ctermfg=NONE
 hi CursorColumn           cterm=NONE             ctermbg=NONE  ctermfg=NONE
@@ -23,7 +23,8 @@ hi Directory              cterm=NONE             ctermbg=NONE  ctermfg=1
 hi ErrorMsg               cterm=bold             ctermbg=NONE  ctermfg=1
 hi FoldColumn             cterm=bold             ctermbg=NONE  ctermfg=2
 hi Folded                 cterm=NONE             ctermbg=8     ctermfg=2
-hi IncSearch              cterm=NONE             ctermbg=8     ctermfg=NONE
+hi Search                 cterm=NONE             ctermbg=238   ctermfg=NONE
+hi IncSearch              cterm=NONE             ctermbg=238   ctermfg=NONE
 hi LineNr                 cterm=NONE             ctermbg=NONE  ctermfg=8
 hi CursorLineNr           cterm=NONE             ctermbg=236   ctermfg=1
 hi VertSplit              cterm=NONE             ctermbg=236   ctermfg=253
@@ -38,8 +39,9 @@ hi TabLine                cterm=NONE             ctermbg=236   ctermfg=8
 hi TabLineFill            cterm=NONE             ctermbg=236   ctermfg=NONE
 hi TabLineSel             cterm=NONE             ctermbg=236   ctermfg=1
 hi MachParen              cterm=NONE             ctermbg=8     ctermfg=NONE
+" }}}
 
-" syntax highlighting
+" syntax highlighting {{{
 hi Comment                cterm=NONE             ctermbg=NONE  ctermfg=4
 hi Todo                   cterm=NONE             ctermbg=NONE  ctermfg=1
 
@@ -52,3 +54,4 @@ hi PreProc                cterm=NONE             ctermbg=NONE  ctermfg=4
 hi Type                   cterm=NONE             ctermbg=NONE  ctermfg=1
 hi Define                 cterm=NONE             ctermbg=NONE  ctermfg=2
 hi Function               cterm=NONE             ctermbg=NONE  ctermfg=1
+" }}}

@@ -1,28 +1,33 @@
 #!/bin/sh
 # set aliases
 
-alias l='ls --color'
-alias la='ls -A --color'
-alias ll='ls -lh --color'
+# ls shorteners
+alias l='ls --color --group-directories-first'
+alias la='ls -A --color --group-directories-first'
+alias ll='ls -lh --color --group-directories-first'
+
+# easy navigation
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../..'
+
+# shorteners
 alias c='clear'
 alias n='ncmpcpp'
 alias r='ranger'
 alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'
+alias pac='pacaur --color=auto --noedit'
+alias cmat='cmatrix -C red -an'
+alias screenf="screenfetch -c1,5 -d '-gpu'"
 
+# git git git
 alias gita='git add .'
 alias gitc='git commit -m'
 alias gitp='git push -u origin master'
-alias gitt='git add . && git commit -m "<commit>" && git push -u origin master'
+alias gitt='git add . && git commit && git push -u origin master'
 
+# I've learned my lesson the hard way
 alias rm='rm -i'
-alias ca='cava'
-alias pac='pacaur --color=auto --noedit'
-alias cmat='cmatrix -C red -an'
-alias pacclean='sudo pacaur -R $(sudo pacaur -Qdtq)'
-alias screenf="screenfetch -c1,5 -d '-gpu'"

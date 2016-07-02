@@ -14,6 +14,6 @@ set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
 # source files
-for config in /home/$USER/.sh.d/*; do
+for config in $HOME/.sh.d/*; do
     source $config
 done

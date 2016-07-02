@@ -15,10 +15,10 @@ hsetroot -fill ~/usr/pics/wall/roadblur.png
 mpd &
 
 # who needs a mouse
-unclutter -idle 1 &
+# unclutter -idle 1 -grab &
 
 # fire up the ol' irc
-dtach -A /tmp/irc-dtach weechat
+dtach -a /tmp/irc-dtach weechat
 
 # start bar
 statusbar
