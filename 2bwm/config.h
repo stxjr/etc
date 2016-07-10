@@ -25,9 +25,9 @@ static const uint8_t offsets[] = {0,0,0,0};
  *6)emptycol         */
 
 // dark
-static const char *colors[] = {"#666666","#444444","#555555","#555555","#555555","#22221a","#555555"};
+// static const char *colors[] = {"#666666","#444444","#555555","#555555","#555555","#222222","#555555"};
 // light
-// static const char *colors[] = {"#cf4c66","#999999","#999999","#999999","#999999","#e8e8e8","#999999"};
+static const char *colors[] = {"#cf4c66","#bbbbbb","#bbbbbb","#bbbbbb","#bbbbbb","#e8e8e8","#bbbbbb"};
 
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
@@ -175,8 +175,8 @@ static key keys[] = {
     // {  MOD ,              XK_a,          unkillable,        {.i=0}},
     // // Make the window appear always on top
     // {  MOD,               XK_t,          always_on_top,     {.i=0}},
-    // // Make the window stay on all workspaces
-    // {  MOD ,              XK_s,          fix,               {.i=0}},
+    // Make the window stay on all workspaces
+    {  MOD ,              XK_s,          fix,               {.i=0}},
     // // Move the cursor
     // {  MOD ,              XK_Up,         cursor_move,       {.i=4}},
     // {  MOD ,              XK_Down,       cursor_move,       {.i=5}},

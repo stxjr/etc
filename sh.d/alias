@@ -16,12 +16,15 @@ alias .....='cd ../../..'
 alias c='clear'
 alias n='ncmpcpp'
 alias r='ranger'
-alias i='dtach -A /tmp/irc-dtach weechat'
+alias i='[ -z "$TMUX" ] && dtach -A /tmp/irc-dtach weechat || echo "no"'
 alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'
+
+# options
 alias pac='pacaur --color=auto --noedit'
 alias cmat='cmatrix -C red -an'
 alias screenf="screenfetch -c1,5 -d '-gpu'"
+alias rm='rm -i'
 
 # git git git
 alias gita='git add .'
@@ -29,5 +32,6 @@ alias gitc='git commit -m'
 alias gitp='git push -u origin master'
 alias gitt='git add . && git commit && git push -u origin master'
 
-# I've learned my lesson the hard way
-alias rm='rm -i'
+# misc
+
+alias bt="wget http://cachefly.cachefly.net/400mb.test -O /dev/null"

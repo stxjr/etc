@@ -1,6 +1,6 @@
 ! special
-*foreground:    #2c2c2c
-*background:    #e8e8e8
+*foreground:    #c2c2c2
+*background:    #222222
 *cursorColor:   #999999
 
 ! black
@@ -8,10 +8,10 @@
 *.color8:       #444444
 
 ! accent
-*.color1:       #cf4c66
-*.color9:       #cf4c66
+*.color1:       #4e9393
+*.color9:       #4e9393
 
-! black
+! dgrey
 *.color2:       #444444
 *.color10:      #444444
 
@@ -27,10 +27,10 @@
 *.color5:       #888888
 *.color13:      #888888
 
-! white
-*.color6:       #999999
-*.color14:      #999999
+! accent
+*.color6:       #4e9393
+*.color14:      #4e9393
 
 ! white
-*.color7:       #999999
-*.color15:      #999999
+*.color7:       #aaaaaa
+*.color15:      #aaaaaa

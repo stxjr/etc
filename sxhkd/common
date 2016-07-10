@@ -1,24 +1,33 @@
 # simple config for any wm
 
+# reload sxhkd
+alt + Escape
+    pkill -USR1 -x sxhkd
+
 # spawn terminal
 alt + {shift + ,_}Return
-    urxvt {-g 80x24+457+226, -g 80x53+457+66}
+    urxvt {-g 80x24+457+226, -g 80x53+457+66} -e tmux
 
-alt + ctrl + Return
-    urxvt -e /bin/mksh
+# no tmux
+alt + ctrl + {shift + ,_}Return
+    urxvt {-g 80x24+457+226, -g 80x53+457+66}
 
 # program launcher
 alt + r
     run
 
-# reload sxhkd
-alt + Escape
-    pkill -USR1 -x sxhkd
+# launch web browser
+super + {_,shift + }w
+    light {_, --private-window}
+
+# take a scrot
+alt + Print
+    shot
 
 # volume
 alt + F{7,8}
     amixer -q sset Master 5%{-,+} unmute && \
-        panelw=100 panelx=1216 panely=70 popup $(~/bin/bar/vol)
+        popup $(~/bin/bar/vol)
 
 # music
 alt + F{9,11}
@@ -27,19 +36,8 @@ alt + F{9,11}
 alt + F10
     mpc toggle && popup $(~/bin/bar/mus)
 
-# launch web browser
-super + {_,shift + }w
-    firefox {_, --private-window}
-
-# take a scrot
-alt + Print
-    shot
-
 alt + m
-    pkill popup; popup $(~/bin/bar/mus)
+    pkill popup; popup "$(~/bin/bar/mus)"
 
 alt + p
-    pkill popup; panelw=100 panelx=50 panely=70 popup "$(~/bin/bar/bat)"
-
-alt + v
-    pkill popup; panelw=100 panelx=1216 panely=70 popup "$(~/bin/bar/vol)"
+    pkill popup; popup "$(~/bin/bar/vol)    $(~/bin/bar/bat)"

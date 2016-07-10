@@ -1,4 +1,5 @@
-" monod(ark) by sythe
+" kuro
+" by sythe
 
 set background=dark
 hi clear
@@ -7,10 +8,11 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "monod"
+let colors_name = "kuro"
 
 " ui highlighting {{{
-hi Normal                 cterm=NONE             ctermbg=NONE  ctermfg=1
+
+hi Normal                 cterm=NONE             ctermbg=NONE  ctermfg=4
 hi ColorColumn            cterm=NONE             ctermbg=236   ctermfg=NONE
 hi Cursor                 cterm=NONE             ctermbg=NONE  ctermfg=NONE
 hi CursorColumn           cterm=NONE             ctermbg=NONE  ctermfg=NONE
@@ -22,23 +24,26 @@ hi DiffText               cterm=NONE             ctermbg=11    ctermfg=NONE
 hi Directory              cterm=NONE             ctermbg=NONE  ctermfg=1
 hi ErrorMsg               cterm=bold             ctermbg=NONE  ctermfg=1
 hi FoldColumn             cterm=bold             ctermbg=NONE  ctermfg=2
-hi Folded                 cterm=NONE             ctermbg=8     ctermfg=2
+hi Folded                 cterm=NONE             ctermbg=NONE  ctermfg=2
 hi Search                 cterm=NONE             ctermbg=238   ctermfg=NONE
 hi IncSearch              cterm=NONE             ctermbg=238   ctermfg=NONE
-hi LineNr                 cterm=NONE             ctermbg=NONE  ctermfg=8
+hi LineNr                 cterm=NONE             ctermbg=NONE  ctermfg=0
 hi CursorLineNr           cterm=NONE             ctermbg=236   ctermfg=1
 hi VertSplit              cterm=NONE             ctermbg=236   ctermfg=253
 hi Visual                 cterm=NONE             ctermbg=0     ctermfg=NONE
 hi Title                  cterm=NONE             ctermbg=NONE  ctermfg=2
-hi NonText                cterm=NONE             ctermbg=NONE  ctermfg=8
+hi NonText                cterm=NONE             ctermbg=NONE  ctermfg=0
 hi SpellBad               cterm=NONE             ctermbg=NONE  ctermfg=7
 hi SpellCap               cterm=NONE             ctermbg=NONE  ctermfg=NONE
 hi StatusLine             cterm=NONE             ctermbg=236   ctermfg=1
-hi StatusLineNC           cterm=NONE             ctermbg=236   ctermfg=8
-hi TabLine                cterm=NONE             ctermbg=236   ctermfg=8
+hi StatusLineNC           cterm=NONE             ctermbg=236   ctermfg=0
+hi TabLine                cterm=NONE             ctermbg=236   ctermfg=0
 hi TabLineFill            cterm=NONE             ctermbg=236   ctermfg=NONE
 hi TabLineSel             cterm=NONE             ctermbg=236   ctermfg=1
-hi MachParen              cterm=NONE             ctermbg=8     ctermfg=NONE
+hi MachParen              cterm=NONE             ctermbg=0     ctermfg=NONE
+
+let g:limelight_conceal_ctermfg = 0
+
 " }}}
 
 " syntax highlighting {{{
