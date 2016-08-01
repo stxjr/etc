@@ -17,4 +17,4 @@ _col()
     esac
 }
 
-PS1='$(_col)$(_dir);$(tput sgr0) '
+PS1='\[$(_col)\]$(_dir);\[$(tput sgr0)\] '

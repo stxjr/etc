@@ -1,0 +1,12 @@
+! raspberry
+! by sythe
+
+#define bg      #e8e8ea
+
+#define blk     #5c605f
+#define acc     #cf4c66
+#define dgry    #82898a
+#define lgry    #969ca3
+#define wht     #a4aeb6
+
+! vim: ft=xdefaults

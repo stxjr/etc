@@ -7,19 +7,50 @@ call plug#begin('~/.config/nvim/plugged')
 " paren/quote matching
 Plug 'ervandew/matchem'
 
-" show git changes in gutter
-Plug 'airblade/vim-gitgutter'
-
-" tab completion in insert mode
-Plug 'ajh17/vimcompletesme'
+" fuzzy file finder
+Plug 'ctrlpvim/ctrlp.vim'
 
 " better file manager
 Plug 'tpope/vim-vinegar'
-    " don't show hidden files by default
-    " gh to toggle
-    let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
+Plug 'junegunn/goyo.vim'
+
+" haskell
+Plug 'neovimhaskell/haskell-vim'
+
+" snipmate and dependencies
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 
 call plug#end()
+
+" }}}
+
+" plugin options {{{
+
+" ctrlp automatically opens in new tab
+let g:ctrlp_prompt_mappings = {
+            \ 'AcceptSelection("e")': ['<c-t>'],
+            \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+            \ }
+
+" ctrlp ignore certain dirs
+set wildignore+=*/etc/*
+
+" close ctrlp's extra tabs
+function! CloseEmptyTab()
+    " If the buffer does not have a file loaded
+    if (len(expand('%:t')) == 0)
+        :quit
+    end
+endfunction
+
+au TabEnter * :call CloseEmptyTab()
+
+" vinegar doesn't show hidden files by default
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " }}}
 
@@ -39,7 +70,7 @@ syntax enable
 set noruler
 
 " enable line numbers
-set number
+" set number
 
 " highlight search as characters are typed
 set incsearch
@@ -47,14 +78,17 @@ set incsearch
 " highlight the cursor line
 set cursorline
 
-" no match highlighting
-" let loaded_matchparen = 1
-
 " disable startup message
 set shortmess+=I
 
-" no statusbar
+" statusbar
 set laststatus=0
+" 
+" set statusline=%2*\ %f\ %1*
+" set statusline+=\ %m
+" set statusline+=%=
+" set statusline+=%p%%\ 
+" set statusline+=%2*\ %{&filetype}\ %1*
 
 " }}}
 
@@ -77,28 +111,30 @@ set tabstop=4
 
 " bindings {{{
 
-" leader (for custom commands) is comma
-let mapleader = "\\"
+" leader (for custom commands) is space
+let mapleader = "\<space>"
+
+nnoremap <leader><leader> :CtrlPMixed<CR>
 
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :wq<CR>
+
+nnoremap <leader>j :tabnext<CR>
+nnoremap <leader>k :tabprevious<CR>
 
 " enter clears search
-nnoremap <CR> :noh<CR><CR>:<backspace>
+" nnoremap <CR> :noh<CR><CR>:<backspace>
 
 " hjkl
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
 
-" fast fingers
-cabbr W w
-cabbr Q q
-cabbr Wq wq
+" map ; to :
+nnoremap ; :
+nnoremap : <nop>
 
 " disable annoying things
 nnoremap Q <nop>
@@ -114,25 +150,24 @@ inoremap jj  <ESC>
 map j gj
 map k gk
 
-" ctrl-hjkl switches panes
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-
 " }}}
 
 " autocommands {{{
 
-" auto save on focus lost
-au FocusLost * silent! wa
+" haskell arrows
+au Filetype haskell source ~/.config/nvim/ftplugin/haskell/tangerine-haskell.vim
 
 " no auto comment
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" use tabs (ugh) in makefiles
+au FileType make setlocal noexpandtab
+
+au filetype c setlocal number
+
 " auto skeletons
-au BufNewFile *.c 0r ~/.config/nvim/c.skel
-au BufNewFile *.html 0r ~/.config/nvim/html.skel
+au BufNewFile *.c 0r ~/.config/nvim/templates/c.skel
+au BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
 
 " }}}
 
@@ -147,14 +182,14 @@ set viminfo=
 " turn mouse off
 set mouse=
 
-" set cursor t0 be 2 lines when scrolling
+" set cursor to be 2 lines when scrolling
 set so=2
 
 " folds use {{{ }}}
 set foldmethod=marker
 
 " don't fold by default
-set foldlevelstart=1
+set foldlevelstart=10
 
 " set undo directory
 set undodir=$HOME/.config/nvim/undo

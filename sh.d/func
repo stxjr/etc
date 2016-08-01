@@ -17,18 +17,18 @@ conf()
     case $1 in
         e|editor)
             $EDITOR ~/.config/nvim/init.vim ;;
-        ncmpcpp|n)
+        n|ncmpcpp)
             $EDITOR ~/.ncmpcpp/config ;;
-        xrdb|x)
+        x|xrdb)
             $EDITOR ~/.Xresources ;;
-        sxhkd|sxhkdrc|s)
-            $EDITOR ~/.config/sxhkd/common ;;
+        s|sxhkd|sxhkdrc)
+            $EDITOR ~/.config/sxhkd/sxhkdrc ;;
         w|weechat)
             $EDITOR ~/.weechat/weechat.conf ;;
         t|tmux)
             $EDITOR ~/.tmux.conf ;;
-        2bwm|2)
-            $EDITOR ~/src/pkg/2bwm/config.h ;;
+        2|2bwm)
+            $EDITOR ~/src/pkg/twobwm/config.h ;;
     esac
 }
 
@@ -42,7 +42,7 @@ src()
             xrdb ~/.Xresources ;;
         2bwm|2)
             prev=$(pwd) && \
-            cd ~/src/pkg/2bwm && \
+            cd ~/src/pkg/twobwm && \
             make && sudo make install && \
             cd $prev ;;
     esac
@@ -52,7 +52,7 @@ src()
 cdl()
 {
     builtin cd "$@" && \
-        if [ $(ls | wc -l) -le 50 ]; then
+        if [ $(ls | wc -l) -le 25 ]; then
             ls --color --group-directories-first
         fi
 }

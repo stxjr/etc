@@ -1,0 +1,12 @@
+! yuki
+! by sythe
+
+#define bg      #e8e8ea
+
+#define blk     #5c605f
+#define acc     #4e9393
+#define dgry    #82898a
+#define lgry    #969ca3
+#define wht     #c4ced6
+
+! vim: ft=xdefaults

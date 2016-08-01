@@ -8,7 +8,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "kuro"
+let colors_name = "shblah"
 
 " ui highlighting {{{
 
@@ -41,8 +41,6 @@ hi TabLine                cterm=NONE             ctermbg=236   ctermfg=0
 hi TabLineFill            cterm=NONE             ctermbg=236   ctermfg=NONE
 hi TabLineSel             cterm=NONE             ctermbg=236   ctermfg=1
 hi MachParen              cterm=NONE             ctermbg=0     ctermfg=NONE
-
-let g:limelight_conceal_ctermfg = 0
 
 " }}}
 

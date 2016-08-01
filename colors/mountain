@@ -1,0 +1,12 @@
+! mountain
+! by sythe
+
+#define bg      #e8efe6
+
+#define blk     #626a73
+#define acc     #439991
+#define dgry    #7a8575
+#define lgry    #849f8f
+#define wht     #aabc9d
+
+! vim: ft=xdefaults

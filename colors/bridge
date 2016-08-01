@@ -1,0 +1,12 @@
+! bridge
+! by sythe
+
+#define bg      #1f2325
+
+#define blk     #949ea6
+#define acc     #5f9296
+#define dgry    #868c93
+#define lgry    #72797a
+#define wht     #2f3335
+
+! vim: ft=xdefaults

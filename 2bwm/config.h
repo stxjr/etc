@@ -7,7 +7,7 @@
 /* Move this many pixels when moving or resizing with keyboard unless the window has hints saying otherwise.
  *0)move step slow   1)move step fast
  *2)mouse slow       3)mouse fast     */
-static const uint16_t movements[] = {20,40,15,100};
+static const uint16_t movements[] = {10,40,15,100};
 /* resize by line like in mcwm -- jmbi */
 static const bool     resize_by_line          = false;
 /* the ratio used when resizing and keeping the aspect */
@@ -16,7 +16,7 @@ static const float    resize_keep_aspect_ratio= 1.03;
 ///---Offsets---///
 /*0)offsetx          1)offsety
  *2)maxwidth         3)maxheight */
-static const uint8_t offsets[] = {0,0,0,0};
+static const uint8_t offsets[] = {20,20,40,40};
 
 ///---Colors---///
 /*0)focuscol         1)unfocuscol
@@ -25,15 +25,15 @@ static const uint8_t offsets[] = {0,0,0,0};
  *6)emptycol         */
 
 // dark
-// static const char *colors[] = {"#666666","#444444","#555555","#555555","#555555","#222222","#555555"};
+// static const char *colors[] = {"#4f5355","#1f2325","#1f2325","#1f2325","#1f2325","#1f2325","#1f2325"};
 // light
-static const char *colors[] = {"#cf4c66","#bbbbbb","#bbbbbb","#bbbbbb","#bbbbbb","#e8e8e8","#bbbbbb"};
+static const char *colors[] = {"#548a8d","#d7dbe5","#d7dbe5","#d7dbe5","#d7dbe5","#d7dbe5","#d7dbe5"};
 
 /*
  * If you are using a composition manager enable the COMPTON flag in the Makefile
  */
 /* if this is set to true the inner border and outer borders colors will be swapped */
-static const bool inverted_colors = true;
+static const bool inverted_colors = false;
 
 ///---Cursor---///
 /* default position of the cursor:
@@ -46,7 +46,7 @@ static const bool inverted_colors = true;
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size    
  *3) Resize border size  */
-static const uint8_t borders[] = {2,6,4,5};
+static const uint8_t borders[] = {0,4,0,0};
 /* Windows that won't have a border.*/
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"xclock"};
@@ -135,7 +135,7 @@ static key keys[] = {
     {  MOD ,              XK_End,        resizestep_aspect, {.i=1}},
     // Full screen window without borders
     {  MOD ,              XK_f,         maximize,          {.i=0}},
-    //Full screen window without borders overiding offsets
+    // // Full screen window without borders overiding offsets
     {  MOD |SHIFT ,       XK_f,          maximize,          {.i=1}},
     // Maximize vertically
     // {  MOD ,              XK_m,          maxvert_hor,       {.i=1}},
@@ -161,8 +161,8 @@ static key keys[] = {
     // // Next/Previous screen
     // {  MOD ,              XK_comma,      changescreen,      {.i=1}},
     // {  MOD ,              XK_period,     changescreen,      {.i=0}},
-    // // Raise or lower a window
-    // {  MOD |SHIFT ,       XK_r,          raiseorlower,      {.i=0}},
+    // Raise or lower a window
+    {  MOD |SHIFT ,       XK_r,          raiseorlower,      {.i=0}},
     // // Next/Previous workspace
     // {  MOD ,              XK_v,          nextworkspace,     {.i=0}},
     // {  MOD ,              XK_c,          prevworkspace,     {.i=0}},
@@ -172,7 +172,7 @@ static key keys[] = {
     // // Iconify the window
     // {  MOD ,              XK_i,          hide,              {.i=0}},
     // // Make the window unkillable
-    // {  MOD ,              XK_a,          unkillable,        {.i=0}},
+    {  MOD ,              XK_a,          unkillable,        {.i=0}},
     // // Make the window appear always on top
     // {  MOD,               XK_t,          always_on_top,     {.i=0}},
     // Make the window stay on all workspaces
@@ -209,7 +209,7 @@ static key keys[] = {
        DESKTOPCHANGE(     XK_4,                             3)
        DESKTOPCHANGE(     XK_5,                             4)
        DESKTOPCHANGE(     XK_6,                             5)
-       DESKTOPCHANGE(     XK_0,                             6)
+       DESKTOPCHANGE(     XK_comma,                         6)
 };
 static Button buttons[] = {
     {  MOD        ,XCB_BUTTON_INDEX_1,     mousemotion,   {.i=TWOBWM_MOVE}},

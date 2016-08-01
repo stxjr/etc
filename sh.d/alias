@@ -1,24 +1,22 @@
 #!/bin/sh
 # set aliases
 
-# ls shorteners
-alias l='ls --color --group-directories-first'
-alias la='ls -A --color --group-directories-first'
-alias ll='ls -lh --color --group-directories-first'
+lsargs='--color --group-directories-first'
 
-# easy navigation
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../..'
+# ls shorteners
+alias l='ls ${lsargs}'
+alias la='ls -A ${lsargs}'
+alias ll='ls -lh ${lsargs}'
 
 # shorteners
-alias c='clear'
 alias n='ncmpcpp'
 alias r='ranger'
-alias i='[ -z "$TMUX" ] && dtach -A /tmp/irc-dtach weechat || echo "no"'
+alias t='exec tmux'
+alias c='cava'
+alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'
+alias f='$EDITOR -c ":CtrlPMixed"'
 
 # options
 alias pac='pacaur --color=auto --noedit'
@@ -27,11 +25,10 @@ alias screenf="screenfetch -c1,5 -d '-gpu'"
 alias rm='rm -i'
 
 # git git git
-alias gita='git add .'
-alias gitc='git commit -m'
-alias gitp='git push -u origin master'
-alias gitt='git add . && git commit && git push -u origin master'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push -u origin master'
+alias gt='git add . && git commit && git push -u origin master'
 
 # misc
-
-alias bt="wget http://cachefly.cachefly.net/400mb.test -O /dev/null"
+alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"

@@ -1,0 +1,71 @@
+# wmtls
+
+alt + esc
+    pkill -USR1 sxhkd
+
+alt + Return
+    urxvt
+
+alt + shift + Return
+    urxvt -g 80x53
+
+alt + r
+    run
+
+alt + {_,shift + }w
+    firefox {_, --private-window}
+
+alt + shift + c
+    killw $(pfw)
+
+alt + {_,shift + }Tab
+    focusw {next, prev}
+
+alt + {1,2,3,4,5,6}
+    wrk -g {0,1,2,3,4,5}
+
+alt + shift + {1,2,3,4,5,6}
+    wrk -m {0,1,2,3,4,5}
+
+alt + {h,j,k,l}
+    wmv {-40 0, 0 40, 0 -40, 40 0} $(pfw)
+
+alt + ctrl + {h,j,k,l}
+    wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+alt + shift + {h,j,k,l}
+    wrs {-40 0, 0 40, 0 -40, 40 0} $(pfw)
+
+alt + shift + ctrl + {h,j,k,l}
+    wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+alt + {y,u,b,n,g}
+    cornerw {tl,tr,bl,br,mm}
+
+# take a scrot
+alt + Print
+    shot
+
+# volume
+alt + F{7,8}
+    amixer -q sset Master 5%{-,+} unmute && \
+        pkill lemonbar; popup "$(~/bin/bar/vol)"
+
+# music
+alt + F{9,11}
+    mpc {prev,next} && popup $(~/bin/bar/mus)
+
+alt + F10
+    mpc toggle && popup "$(~/bin/bar/mus)"
+
+alt + BackSpace
+    mpc prev && mpc next && popup "$(~/bin/bar/mus)"
+
+alt + m
+    pkill lemonbar; popup "$(~/bin/bar/mus)"
+
+alt + p
+    pkill lemonbar; length=500 ypos=718 popup "$(~/bin/bar/bat)    $(~/bin/bar/clk)    $(~/bin/bar/dat)    $(~/bin/bar/mus)    $(~/bin/bar/vol)"
+
+alt + t
+    pkill lemonbar; popup "$(~/bin/bar/clk)    $(~/bin/bar/dat)"

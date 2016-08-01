@@ -1,25 +1,82 @@
-#include ".colors/shiro"
+#include ".colors/mist"
 
-! set the font
-URxvt.font: -sythe-tangerine-*-*-*-*-*-*-*-*-*-*-*-*, -*-siji-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt.letterSpace: 0
+! template for colors {{{
+*.foreground:   blk
+*.background:   bg
+*.cursorColor:  wht
 
-! no bold fonts for you
-URxvt*boldFont: 
-URxvt*italicFont: 
-URxvt*bolditalicFont: 
+! black
+*.color0:       blk
+*.color8:       blk
 
-! increase line spacing
-URxvt*lineSpace: 1
+! accent
+*.color1:       acc
+*.color9:       acc
 
-! disable scrollbar
-URxvt.scrollBar: false
+! accent
+*.color2:       acc
+*.color10:      acc
 
-! set urxvt as login shell
-URxvt*loginShell: false
+! dgrey
+*.color3:       dgry
+*.color11:      dgry
 
-! set terminal padding
-URxvt.internalBorder: 20
+! dgrey
+*.color4:       dgry
+*.color12:      dgry
+
+! lgrey
+*.color5:       lgry
+*.color13:      lgry
+
+! lgrey
+*.color6:       lgry
+*.color14:      lgry
+
+! white
+*.color7:       wht
+*.color15:      wht
+
+! }}}
+
+! st {{{
+
+! font and line spacing
+st.font: yuki:pixelsize=9
+st.chscale: 1.2
+st.cwscale: 1.0
+
+! internal border
+st.borderpx: 20
+
+! cursor is a block
+st.cursorshape:  1
+
+! }}}
+
+! urxvt {{{
 
 ! set cursor blinking
-URxvt.cursorBlink: 1
+urxvt.cursorBlink: 1
+
+! set terminal padding
+urxvt.internalBorder: 20
+
+! disable scrollbar
+urxvt.scrollBar: false
+
+! set urxvt as login shell
+urxvt*loginShell: false
+
+! set the font
+urxvt.font: xft:yuki:pixelsize=9
+
+! no bold fonts for you
+urxvt*boldFont: 
+urxvt*italicFont: 
+urxvt*bolditalicFont: 
+
+! increase line spacing
+urxvt*lineSpace: 2
+
+! }}}

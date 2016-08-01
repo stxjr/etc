@@ -1,0 +1,12 @@
+! grass
+! by sythe
+
+#define bg      #eae8e5
+
+#define blk     #79736e
+#define acc     #84af3a
+#define dgry    #938b88
+#define lgry    #a4a09d
+#define wht     #c2bdbb
+
+! vim: ft=xdefaults

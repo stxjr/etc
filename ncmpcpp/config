@@ -3,42 +3,34 @@ mpd_music_dir = ~/usr/music
 
 cyclic_scrolling = yes
 playlist_disable_highlight_delay = "1"
-header_visibility = "no"
-statusbar_visibility = "yes"
-playlist_display_mode = "classic"
-mouse_support = "no"
-titles_visibility = "no"
+header_visibility = no
+statusbar_visibility = yes
+playlist_display_mode = classic
+mouse_support = no
+titles_visibility = no
 
 # formats
-song_status_format = "{{$6%a ;} $2%t}|{%f}"
-song_list_format = "{{$6%a ; }$2%t $R{$2%b $6; }$6%l }|{%f $R}"
+song_status_format = "{{$4%a ; }$2%t}|{%f}"
+song_list_format = "{{$4%a ; }$2%t $R$4%l }|{%f $R}"
 alternative_header_second_line_format = "$1%a"
-media_library_primary_tag = "artist"
-now_playing_prefix = " "
-now_playing_suffix = " "
+media_library_primary_tag = artist
+now_playing_prefix = "$4 "
+now_playing_suffix = "$4 "
 
 # progress bar
-#progressbar_look = "ùùù"
 progressbar_look = "━━━"
-progressbar_boldness = "no"   
-progressbar_color = "white"
-progressbar_elapsed_color = "red"
+progressbar_boldness = no
+progressbar_color = white
+progressbar_elapsed_color = red
 
 # colors
 colors_enabled = yes
-# empty_tag_color = "red"
-# statusbar_color = "blue"
-# state_line_color = "blue"
-# state_flags_color = "blue"
-# main_window_color = "blue" 
-# header_window_color = "blue"
-# main_window_highlight_color = "red"
 
 # visualizer
-visualizer_in_stereo = "yes"
-visualizer_sync_interval = "30"
+visualizer_in_stereo = yes
+visualizer_sync_interval = 30
 visualizer_output_name = "Pipe"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_type = "spectrum"
-visualizer_color = "white,red"
-visualizer_look = "┃┃"
+visualizer_color = red
+visualizer_look = "þ┃"

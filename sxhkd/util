@@ -1,0 +1,45 @@
+# simple config for any wm
+
+# reload sxhkd
+alt + Escape
+    pkill -USR1 -x sxhkd
+
+# spawn terminal
+alt + {_,shift +}Return
+    urxvt -g {80x24+459+216, 80x48+459+72}
+
+# program launcher
+alt + r
+    run
+
+# launch web browser
+alt + {_,shift + }w
+    firefox {_, --private-window}
+
+# take a scrot
+alt + Print
+    shot
+
+# volume
+alt + F{7,8}
+    amixer -q sset Master 5%{-,+} unmute && \
+        popup "$(~/bin/bar/vol)"
+
+# music
+alt + F{9,11}
+    mpc {prev,next} && popup $(~/bin/bar/mus)
+
+alt + F10
+    mpc toggle && popup "$(~/bin/bar/mus)"
+
+alt + BackSpace
+    mpc prev && mpc next && popup "$(~/bin/bar/mus)"
+
+alt + m
+    popup "$(~/bin/bar/mus)"
+
+alt + p
+    length=500 ypos=718 popup "$(~/bin/bar/bat)    $(~/bin/bar/clk)    $(~/bin/bar/dat)    $(~/bin/bar/mus)    $(~/bin/bar/vol)"
+
+alt + t
+    popup "$(~/bin/bar/clk)    $(~/bin/bar/dat)"

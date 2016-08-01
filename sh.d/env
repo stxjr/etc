@@ -1,3 +1,5 @@
+source ~/.bashrc
+
 export EDITOR=nvim
 export VISUAL=$EDITOR
 export STEAM_RUNTIME=0
