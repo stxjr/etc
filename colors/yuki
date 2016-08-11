@@ -1,12 +1,13 @@
-! yuki
+! mist
+! light bg, blue-white tint, cyan fg (wintery)
 ! by sythe
 
-#define bg      #e8e8ea
+#define bg      #d7dbe5
 
-#define blk     #5c605f
-#define acc     #4e9393
-#define dgry    #82898a
+#define blk     #56605f
+#define acc     #548a8d
+#define dgry    #7c898c
 #define lgry    #969ca3
-#define wht     #c4ced6
+#define wht     #c7cbd5
 
 ! vim: ft=xdefaults

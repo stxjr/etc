@@ -12,7 +12,7 @@ xset +fp /usr/share/fonts/bitmap
 xset fp rehash
 
 # set wallpaper
-hsetroot -fill ~/usr/img/wall/blur/dragon.png
+hsetroot -fill ~/usr/img/wall/blur/snow.png
 
 # set mouse to pointer
 xsetroot -cursor_name left_ptr
@@ -20,8 +20,8 @@ xsetroot -cursor_name left_ptr
 # who needs a mouse
 unclutter -idle 1 &
 
-# fire up the ol' irc
-dtach -n /tmp/irc-dtach weechat
+# compton
+compton -bcC --config ~/.compton.conf
 
 # music daemon
 mpd &

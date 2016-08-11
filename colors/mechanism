@@ -1,0 +1,13 @@
+! mechanism
+! dark bg, blue tint, dark cyan fg
+! by sythe
+
+#define bg      #141c26
+
+#define blk     #5c726f
+#define acc     #4b7362
+#define dgry    #4f5e67 
+#define lgry    #3f4e57
+#define wht     #242c36
+
+! vim: ft=xdefaults

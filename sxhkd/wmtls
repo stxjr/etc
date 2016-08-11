@@ -1,50 +1,104 @@
 # wmtls
 
-alt + esc
+alt + Escape
     pkill -USR1 sxhkd
+
+# launch {{{
 
 alt + Return
     urxvt
-
-alt + shift + Return
-    urxvt -g 80x53
 
 alt + r
     run
 
 alt + {_,shift + }w
-    firefox {_, --private-window}
+    chromium {_, --incognito}
+
+# take a scrot
+alt + Print
+    shot
+
+# }}}
+
+# misc {{{
 
 alt + shift + c
     killw $(pfw)
 
+alt + f
+    fullw $(pfw)
+
 alt + {_,shift + }Tab
     focusw {next, prev}
 
-alt + {1,2,3,4,5,6}
+# ~button1
+#    focusw $(underneath)
+
+alt + {1,2,3,4,comma,period}
     wrk -g {0,1,2,3,4,5}
 
-alt + shift + {1,2,3,4,5,6}
+alt + shift + {1,2,3,4,comma,period}
     wrk -m {0,1,2,3,4,5}
+
+# }}}
+
+# move/resize {{{
 
 alt + {h,j,k,l}
     wmv {-40 0, 0 40, 0 -40, 40 0} $(pfw)
 
 alt + ctrl + {h,j,k,l}
-    wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+    wmv {-10 0, 0 10, 0 -10, 10 0} $(pfw)
 
 alt + shift + {h,j,k,l}
     wrs {-40 0, 0 40, 0 -40, 40 0} $(pfw)
 
 alt + shift + ctrl + {h,j,k,l}
-    wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+    wrs {-10 0, 0 10, 0 -10, 10 0} $(pfw)
 
-alt + {y,u,b,n,g}
-    cornerw {tl,tr,bl,br,mm}
+alt + {y,u,i,o,g,p,b,n,m}
+    cornerw {tl,tm,tr,ml,mm,mr,bl,bm,br}
 
-# take a scrot
-alt + Print
-    shot
+# }}}
+
+# presets {{{
+
+alt + ctrl + q
+    wtp 465 263 430 237 $(pfw)
+
+alt + ctrl + w
+    wtp 465 222 430 318 $(pfw)
+
+alt + ctrl + e
+    wtp 465 200 430 363 $(pfw)
+
+alt + ctrl + a
+    wtp 465 137 430 489 $(pfw)
+
+alt + ctrl + s
+    wtp 465 52 430 658 $(pfw)
+
+alt + ctrl + d
+    wtp 465 10 430 742 $(pfw)
+
+# alt + ctrl + g
+#     wtp 465 52 430 658 $(pfw)
+# 
+# alt + ctrl + y
+#     wtp 10 10 430 238 $(pfw)
+# 
+# alt + ctrl + u
+#     wtp 920 10 430 478 $(pfw)
+# 
+# alt + ctrl + b
+#     wtp 10 265 430 487 $(pfw)
+# 
+# alt + ctrl + n
+#     wtp 920 514 430 238 $(pfw)
+
+# }}}
+
+# music and vol {{{
 
 # volume
 alt + F{7,8}
@@ -61,11 +115,17 @@ alt + F10
 alt + BackSpace
     mpc prev && mpc next && popup "$(~/bin/bar/mus)"
 
-alt + m
-    pkill lemonbar; popup "$(~/bin/bar/mus)"
+# }}}
 
-alt + p
-    pkill lemonbar; length=500 ypos=718 popup "$(~/bin/bar/bat)    $(~/bin/bar/clk)    $(~/bin/bar/dat)    $(~/bin/bar/mus)    $(~/bin/bar/vol)"
+# popups {{{
 
-alt + t
-    pkill lemonbar; popup "$(~/bin/bar/clk)    $(~/bin/bar/dat)"
+alt + a
+    popup "$(~/bin/bar/mus)"
+
+alt + s
+    popup "$(~/bin/bar/clk)    $(~/bin/bar/dat)"
+
+alt + d
+    popup "$(~/bin/bar/bat)    $(~/bin/bar/vol)"
+
+# }}}

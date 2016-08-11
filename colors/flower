@@ -1,0 +1,13 @@
+! flower
+! dark bg, purple tint, red fg
+! by sythe
+
+#define bg      #18191c
+
+#define blk     #857c7f
+#define acc     #7f3f4d
+#define dgry    #615b62
+#define lgry    #4d484e
+#define wht     #313336
+
+! vim: ft=xdefaults

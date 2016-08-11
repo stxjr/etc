@@ -1,9 +1,9 @@
-#include ".colors/mist"
+#include ".colors/slate"
 
 ! template for colors {{{
 *.foreground:   blk
 *.background:   bg
-*.cursorColor:  wht
+*.cursorColor:  lgry
 
 ! black
 *.color0:       blk
@@ -47,7 +47,7 @@ st.chscale: 1.2
 st.cwscale: 1.0
 
 ! internal border
-st.borderpx: 20
+st.borderpx: 15
 
 ! cursor is a block
 st.cursorshape:  1
@@ -60,7 +60,7 @@ st.cursorshape:  1
 urxvt.cursorBlink: 1
 
 ! set terminal padding
-urxvt.internalBorder: 20
+urxvt.internalBorder: 15
 
 ! disable scrollbar
 urxvt.scrollBar: false

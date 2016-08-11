@@ -1,0 +1,13 @@
+! slate
+! dark bg, grey-blue tint
+! by sythe
+
+#define bg      #1b1e21
+
+#define blk     #909087
+#define acc     #5c6e70
+#define dgry    #6a6d6b
+#define lgry    #525655
+#define wht     #24282c
+
+! vim: ft=xdefaults

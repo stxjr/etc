@@ -27,7 +27,7 @@ progressbar_elapsed_color = red
 colors_enabled = yes
 
 # visualizer
-visualizer_in_stereo = yes
+visualizer_in_stereo = no
 visualizer_sync_interval = 30
 visualizer_output_name = "Pipe"
 visualizer_fifo_path = "/tmp/mpd.fifo"

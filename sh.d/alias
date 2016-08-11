@@ -11,7 +11,6 @@ alias ll='ls -lh ${lsargs}'
 # shorteners
 alias n='ncmpcpp'
 alias r='ranger'
-alias t='exec tmux'
 alias c='cava'
 alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:$HOME:~:g\""
@@ -32,3 +31,70 @@ alias gt='git add . && git commit && git push -u origin master'
 
 # misc
 alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
+
+# auto compile fonts
+autofont()
+{
+    bdftopcf $1.bdf -o $1.pcf && \
+        mkfontscale && \
+        mkfontdir && \
+        xset fp rehash && \
+        fc-cache -fv
+}
+
+# quick access to config files
+conf()
+{
+    case $1 in
+        e|editor)
+            $EDITOR ~/.config/nvim/init.vim ;;
+        n|ncmpcpp)
+            $EDITOR ~/.ncmpcpp/config ;;
+        x|xrdb)
+            $EDITOR ~/.Xresources ;;
+        s|sxhkd|sxhkdrc)
+            $EDITOR ~/.config/sxhkd/sxhkdrc ;;
+        w|weechat)
+            $EDITOR ~/.weechat/weechat.conf ;;
+        t|tmux)
+            $EDITOR ~/.tmux.conf ;;
+        2|2bwm)
+            $EDITOR ~/src/pkg/twobwm/config.h ;;
+    esac
+}
+
+# source files and stuff
+src()
+{
+    case $1 in
+        shell|sh|s)
+            source ~/.bashrc ;;
+        xrdb|x)
+            xrdb ~/.Xresources ;;
+        2bwm|2)
+            prev=$(pwd) && \
+            cd ~/src/pkg/twobwm && \
+            make && sudo make install && \
+            cd $prev ;;
+    esac
+}
+
+# ls after cd
+cdl()
+{
+    builtin cd "$@" && \
+        if [ $(ls | wc -l) -le 25 ]; then
+            ls --color --group-directories-first
+        fi
+}
+
+# just heck it all
+heck()
+{
+    sudo $(fc -nlr | sed 1q)
+}
+
+settitle()
+{
+    echo -ne "\ek$1\e\\"
+}
