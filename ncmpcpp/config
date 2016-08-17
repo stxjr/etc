@@ -1,5 +1,5 @@
 # mpd
-mpd_music_dir = ~/usr/music
+mpd_music_dir = ~/usr/mus
 
 cyclic_scrolling = yes
 playlist_disable_highlight_delay = "1"

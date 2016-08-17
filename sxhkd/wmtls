@@ -103,29 +103,29 @@ alt + ctrl + d
 # volume
 alt + F{7,8}
     amixer -q sset Master 5%{-,+} unmute && \
-        pkill lemonbar; popup "$(~/bin/bar/vol)"
+        pkill lemonbar; popup "$(vol)"
 
 # music
 alt + F{9,11}
-    mpc {prev,next} && popup $(~/bin/bar/mus)
+    mpc {prev,next} && popup $(mus)
 
 alt + F10
-    mpc toggle && popup "$(~/bin/bar/mus)"
+    mpc toggle && popup "$(mus)"
 
 alt + BackSpace
-    mpc prev && mpc next && popup "$(~/bin/bar/mus)"
+    mpc prev && mpc next && popup "$(mus)"
 
 # }}}
 
 # popups {{{
 
 alt + a
-    popup "$(~/bin/bar/mus)"
+    popup "$(mus)"
 
 alt + s
-    popup "$(~/bin/bar/clk)    $(~/bin/bar/dat)"
+    popup "$(clk)    $(dat)"
 
 alt + d
-    popup "$(~/bin/bar/bat)    $(~/bin/bar/vol)"
+    popup "$(bat)    $(vol)"
 
 # }}}

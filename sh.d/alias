@@ -2,6 +2,7 @@
 # set aliases
 
 lsargs='--color --group-directories-first'
+alias ls='command ls ${lsargs}'
 
 # ls shorteners
 alias l='ls ${lsargs}'
@@ -18,7 +19,6 @@ alias e='$EDITOR'
 alias f='$EDITOR -c ":CtrlPMixed"'
 
 # options
-alias pac='pacaur --color=auto --noedit'
 alias cmat='cmatrix -C red -an'
 alias screenf="screenfetch -c1,5 -d '-gpu'"
 alias rm='rm -i'
@@ -29,8 +29,8 @@ alias gc='git commit -m'
 alias gp='git push -u origin master'
 alias gt='git add . && git commit && git push -u origin master'
 
-# misc
-alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
+# sudo works with aliases
+alias sudo='sudo '
 
 # auto compile fonts
 autofont()
@@ -51,7 +51,7 @@ conf()
         n|ncmpcpp)
             $EDITOR ~/.ncmpcpp/config ;;
         x|xrdb)
-            $EDITOR ~/.Xresources ;;
+            $EDITOR ~/.xresources ;;
         s|sxhkd|sxhkdrc)
             $EDITOR ~/.config/sxhkd/sxhkdrc ;;
         w|weechat)
@@ -70,7 +70,7 @@ src()
         shell|sh|s)
             source ~/.bashrc ;;
         xrdb|x)
-            xrdb ~/.Xresources ;;
+            xrdb ~/.xresources ;;
         2bwm|2)
             prev=$(pwd) && \
             cd ~/src/pkg/twobwm && \
@@ -79,22 +79,8 @@ src()
     esac
 }
 
-# ls after cd
-cdl()
-{
-    builtin cd "$@" && \
-        if [ $(ls | wc -l) -le 25 ]; then
-            ls --color --group-directories-first
-        fi
-}
-
 # just heck it all
 heck()
 {
     sudo $(fc -nlr | sed 1q)
-}
-
-settitle()
-{
-    echo -ne "\ek$1\e\\"
 }

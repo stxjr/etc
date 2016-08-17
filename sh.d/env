@@ -1,5 +1,5 @@
-source ~/.bashrc
+EDITOR=nvim
+VISUAL=$EDITOR
+HISTCONTROL=ignorespace
 
-export EDITOR=nvim
-export VISUAL=$EDITOR
-export STEAM_RUNTIME=0
+export EDITOR VISUAL HISTCONTROL

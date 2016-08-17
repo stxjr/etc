@@ -10,14 +10,11 @@ complete -d cd
 # auto cd
 shopt -s autocd
 
-# clear screen with ^L
-bind -m vi-insert "\C-l":clear-screen
-
 # give some room
 HISTSIZE=10000
 HISTFILESIZE=10000
 
-PATH="$PATH:/home/fuyuki/bin:/home/fuyuki/bin/wmtls"
+PATH="$PATH:/home/sxthe/bin:/home/sxthe/bin/wmtls"
 
 # source files
 for config in $HOME/.sh.d/*; do

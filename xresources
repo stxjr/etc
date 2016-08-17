@@ -69,7 +69,7 @@ urxvt.scrollBar: false
 urxvt*loginShell: false
 
 ! set the font
-urxvt.font: xft:yuki:pixelsize=9
+urxvt.font: xft:yuki:pixelsize=8
 
 ! no bold fonts for you
 urxvt*boldFont: 

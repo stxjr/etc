@@ -1,14 +1,13 @@
 #!/bin/sh
 
 # xrdb
-xrdb ~/.Xresources
+xrdb ~/.xresources
 
 # remap caps lock to control
 setxkbmap -option 'caps:ctrl_modifier'
 
 # load fonts
 xset +fp ~/.fonts
-xset +fp /usr/share/fonts/bitmap
 xset fp rehash
 
 # set wallpaper

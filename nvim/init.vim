@@ -5,7 +5,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " paren/quote matching
-Plug 'townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 
 " fuzzy file finder
 Plug 'ctrlpvim/ctrlp.vim'
@@ -18,12 +18,6 @@ Plug 'ajh17/vimcompletesme'
 
 " haskell
 Plug 'neovimhaskell/haskell-vim'
-
-" snipmate and dependencies
-" Plug 'garbas/vim-snipmate'
-" Plug 'honza/vim-snippets'
-" Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'tomtom/tlib_vim'
 
 call plug#end()
 
@@ -38,7 +32,7 @@ let g:ctrlp_prompt_mappings = {
             \ }
 
 " ctrlp ignore certain dirs
-set wildignore+=*/etc/*
+let g:ctrlp_user_command = 'find %s -type f | grep -v "etc/"'
 
 " close ctrlp's extra tabs
 function! CloseEmptyTab()
@@ -155,7 +149,7 @@ map k gk
 " autocommands {{{
 
 " haskell arrows
-au Filetype haskell source ~/.config/nvim/ftplugin/haskell/tangerine-haskell.vim
+au Filetype haskell source ~/.config/nvim/ftplugin/haskell/yuki-haskell.vim
 
 " no auto comment
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
