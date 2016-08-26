@@ -1,0 +1,13 @@
+! clockwork
+! dark bg, TODO
+! by sxthe
+
+#define bg      #222222
+
+#define blk     #888888
+#define acc     #907b4d
+#define dgry    #666666
+#define lgry    #555555
+#define wht     #333333
+
+! vim: ft=xdefaults

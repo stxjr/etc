@@ -1,0 +1,13 @@
+! cozy
+! light bg, beige tint
+! by sxthe
+
+#define bg      #e2dcda
+
+#define blk     #5c554b
+#define acc     #8c8958
+#define dgry    #71695d
+#define lgry    #8d8977
+#define wht     #c5bbb7
+
+! vim: ft=xdefaults

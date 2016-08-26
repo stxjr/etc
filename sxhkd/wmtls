@@ -3,10 +3,16 @@
 alt + Escape
     pkill -USR1 sxhkd
 
+alt + shift + ctrl + c
+    pkill xwait
+
 # launch {{{
 
 alt + Return
     urxvt
+
+alt + shift + Return
+    emacsclient -c
 
 alt + r
     run
@@ -67,34 +73,19 @@ alt + ctrl + q
     wtp 465 263 430 237 $(pfw)
 
 alt + ctrl + w
-    wtp 465 222 430 318 $(pfw)
-
-alt + ctrl + e
-    wtp 465 200 430 363 $(pfw)
-
-alt + ctrl + a
     wtp 465 137 430 489 $(pfw)
 
-alt + ctrl + s
-    wtp 465 52 430 658 $(pfw)
-
-alt + ctrl + d
+alt + ctrl + e
     wtp 465 10 430 742 $(pfw)
 
-# alt + ctrl + g
+# alt + ctrl + a
+#     wtp 465 137 430 489 $(pfw)
+# 
+# alt + ctrl + s
 #     wtp 465 52 430 658 $(pfw)
 # 
-# alt + ctrl + y
-#     wtp 10 10 430 238 $(pfw)
-# 
-# alt + ctrl + u
-#     wtp 920 10 430 478 $(pfw)
-# 
-# alt + ctrl + b
-#     wtp 10 265 430 487 $(pfw)
-# 
-# alt + ctrl + n
-#     wtp 920 514 430 238 $(pfw)
+# alt + ctrl + d
+#     wtp 465 10 430 742 $(pfw)
 
 # }}}
 

@@ -10,6 +10,8 @@ endif
 
 let colors_name = "kuro"
 
+let g:limelight_conceal_ctermfg = 7
+
 " ui highlighting {{{
 
 hi Normal                 cterm=none             ctermbg=none  ctermfg=3

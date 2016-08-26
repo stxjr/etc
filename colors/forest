@@ -1,13 +1,13 @@
 ! forest
 ! dark bg, green tint
-! by sythe
+! by sxthe
 
-#define bg      #1f231f
+#define bg      #1f211e
 
-#define blk     #7c8b6f
-#define acc     #48873a
-#define dgry    #6f8265
-#define lgry    #5b6d53
-#define wht     #323b2f
+#define blk     #808366
+#define acc     #567c44
+#define dgry    #6a6d55
+#define lgry    #555744
+#define wht     #2f312e
 
 ! vim: ft=xdefaults

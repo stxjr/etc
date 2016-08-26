@@ -1,13 +1,13 @@
 ! mist
 ! light bg, blue-white tint, cyan fg (wintery)
-! by sythe
+! by sxthe
 
 #define bg      #d7dbe5
 
-#define blk     #56605f
+#define blk     #66706f
 #define acc     #548a8d
 #define dgry    #7c898c
 #define lgry    #969ca3
-#define wht     #c7cbd5
+#define wht     #c0c4cd
 
 ! vim: ft=xdefaults

@@ -1,4 +1,4 @@
-#include ".colors/slate"
+#include ".colors/cozy"
 
 ! template for colors {{{
 *.foreground:   blk

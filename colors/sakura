@@ -1,0 +1,14 @@
+! mist
+! light bg, no tint, red fg
+! just a lazy colorscheme
+! by sxthe
+
+#define bg      #dddddd
+
+#define blk     #666666
+#define acc     #cf4c66
+#define dgry    #777777
+#define lgry    #888888
+#define wht     #cccccc
+
+! vim: ft=xdefaults

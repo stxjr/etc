@@ -11,7 +11,7 @@ xset +fp ~/.fonts
 xset fp rehash
 
 # set wallpaper
-hsetroot -fill ~/usr/img/wall/blur/snow.png
+hsetroot -fill ~/usr/img/wall/blur/waterfall.png
 
 # set mouse to pointer
 xsetroot -cursor_name left_ptr
@@ -29,4 +29,4 @@ mpd &
 sxhkd &
 wrk -i &
 wew | evwatch &
-exec xwait
+exec none

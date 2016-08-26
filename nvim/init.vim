@@ -19,6 +19,8 @@ Plug 'ajh17/vimcompletesme'
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 
+Plug 'junegunn/limelight.vim'
+
 call plug#end()
 
 " }}}
@@ -52,7 +54,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " colors {{{
 
 " set colorscheme
-colorscheme kuro
+colorscheme shiro
 
 " use color coded syntax
 syntax enable
@@ -110,6 +112,7 @@ set tabstop=4
 let mapleader = "\<space>"
 
 nnoremap <leader><leader> :CtrlPMixed<CR>
+nnoremap <leader>l :silent Limelight!!<CR>
 
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>w :w<CR>
@@ -149,7 +152,7 @@ map k gk
 " autocommands {{{
 
 " haskell arrows
-au Filetype haskell source ~/.config/nvim/ftplugin/haskell/yuki-haskell.vim
+au Filetype haskell source ~/.config/nvim/ftplugin/haskell.vim
 
 " no auto comment
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -160,8 +163,8 @@ au FileType make setlocal noexpandtab
 " au filetype c setlocal number
 
 " auto skeletons
-au BufNewFile *.c 0r ~/.config/nvim/templates/c.skel
-au BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
+au BufNewFile *.c 0r ~/.config/nvim/c.skel
+au BufNewFile *.html 0r ~/.config/nvim/html.skel
 
 " }}}
 
