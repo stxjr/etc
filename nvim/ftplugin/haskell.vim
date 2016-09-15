@@ -1,1 +1,0 @@
-/home/sxthe/src/yuki/haskell.vim

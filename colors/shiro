@@ -1,11 +1,11 @@
-! mist
-! light bg, no tint, red fg
-! just a lazy colorscheme
+! shiro
+! light bg, no tint, varied fg
 ! by sxthe
 
 #define bg      #dddddd
 
 #define blk     #666666
+! #define acc     #468c88
 #define acc     #cf4c66
 #define dgry    #777777
 #define lgry    #888888

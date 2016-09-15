@@ -1,8 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/sxthe/.config/nvim'
-let g:netrw_dirhist_2='/home/sxthe/bin'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/sxthe/bin'
+let g:netrw_dirhist_2='/home/sxthe/src/web'
 let g:netrw_dirhist_3='/home/sxthe'
-let g:netrw_dirhist_4='/home/sxthe/~'
-let g:netrw_dirhist_5='/home/sxthe/.weechat'
-let g:netrw_dirhist_6='/home/sxthe/src/web/css'
+let g:netrw_dirhist_4='/home/sxthe/.config/youtube-dlg'

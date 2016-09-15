@@ -1,18 +1,15 @@
 #!/bin/sh
 # set aliases
 
-lsargs='--color --group-directories-first'
-alias ls='command ls ${lsargs}'
-
 # ls shorteners
+lsargs='--color --group-directories-first'
 alias l='ls ${lsargs}'
-alias la='ls -A ${lsargs}'
+alias la='ls -a ${lsargs}'
 alias ll='ls -lh ${lsargs}'
 
 # shorteners
 alias n='ncmpcpp'
 alias r='ranger'
-alias c='cava'
 alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'

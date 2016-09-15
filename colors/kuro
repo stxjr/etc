@@ -1,11 +1,11 @@
-! clockwork
-! dark bg, TODO
+! kuro
+! dark bg, no tint, varied fg
 ! by sxthe
 
 #define bg      #222222
 
 #define blk     #888888
-#define acc     #907b4d
+#define acc     #2e7373
 #define dgry    #666666
 #define lgry    #555555
 #define wht     #333333

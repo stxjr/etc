@@ -1,5 +1,7 @@
 " init.vim
 
+source ~/.config/nvim/ligatures.vim
+
 " plugins {{{
 
 call plug#begin('~/.config/nvim/plugged')
@@ -19,8 +21,6 @@ Plug 'ajh17/vimcompletesme'
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 
-Plug 'junegunn/limelight.vim'
-
 call plug#end()
 
 " }}}
@@ -32,9 +32,6 @@ let g:ctrlp_prompt_mappings = {
             \ 'AcceptSelection("e")': ['<c-t>'],
             \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
             \ }
-
-" ctrlp ignore certain dirs
-let g:ctrlp_user_command = 'find %s -type f | grep -v "etc/"'
 
 " close ctrlp's extra tabs
 function! CloseEmptyTab()
@@ -54,7 +51,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " colors {{{
 
 " set colorscheme
-colorscheme shiro
+colorscheme kuro
 
 " use color coded syntax
 syntax enable
@@ -112,7 +109,7 @@ set tabstop=4
 let mapleader = "\<space>"
 
 nnoremap <leader><leader> :CtrlPMixed<CR>
-nnoremap <leader>l :silent Limelight!!<CR>
+nnoremap <leader>l :Limelight!!<CR>
 
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>w :w<CR>
@@ -150,9 +147,6 @@ map k gk
 " }}}
 
 " autocommands {{{
-
-" haskell arrows
-au Filetype haskell source ~/.config/nvim/ftplugin/haskell.vim
 
 " no auto comment
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

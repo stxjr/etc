@@ -1,9 +1,9 @@
-#include ".colors/cozy"
+#include ".colors/shiro"
 
 ! template for colors {{{
 *.foreground:   blk
 *.background:   bg
-*.cursorColor:  lgry
+*.cursorColor:  wht
 
 ! black
 *.color0:       blk
@@ -50,7 +50,7 @@ st.cwscale: 1.0
 st.borderpx: 15
 
 ! cursor is a block
-st.cursorshape:  1
+st.cursorshape:  0
 
 ! }}}
 

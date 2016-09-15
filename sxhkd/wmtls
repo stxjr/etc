@@ -4,7 +4,7 @@ alt + Escape
     pkill -USR1 sxhkd
 
 alt + shift + ctrl + c
-    pkill xwait
+    pkill none
 
 # launch {{{
 
@@ -12,12 +12,12 @@ alt + Return
     urxvt
 
 alt + shift + Return
-    emacsclient -c
+    emacsclient -c --alternate-editor=""
 
 alt + r
     run
 
-alt + {_,shift + }w
+alt + {_,shift + }z
     chromium {_, --incognito}
 
 # take a scrot
@@ -40,10 +40,10 @@ alt + {_,shift + }Tab
 # ~button1
 #    focusw $(underneath)
 
-alt + {1,2,3,4,comma,period}
+alt + {1,2,3,4,bracketleft,bracketright}
     wrk -g {0,1,2,3,4,5}
 
-alt + shift + {1,2,3,4,comma,period}
+alt + shift + {1,2,3,4,bracketleft,bracketright}
     wrk -m {0,1,2,3,4,5}
 
 # }}}
@@ -69,13 +69,13 @@ alt + {y,u,i,o,g,p,b,n,m}
 
 # presets {{{
 
-alt + ctrl + q
+alt + q
     wtp 465 263 430 237 $(pfw)
 
-alt + ctrl + w
+alt + w
     wtp 465 137 430 489 $(pfw)
 
-alt + ctrl + e
+alt + e
     wtp 465 10 430 742 $(pfw)
 
 # alt + ctrl + a
@@ -94,29 +94,29 @@ alt + ctrl + e
 # volume
 alt + F{7,8}
     amixer -q sset Master 5%{-,+} unmute && \
-        pkill lemonbar; popup "$(vol)"
+        pkill lemonbar; pop "$(vol)"
 
 # music
 alt + F{9,11}
-    mpc {prev,next} && popup $(mus)
+    mpc {prev,next} && pop $(mus)
 
 alt + F10
-    mpc toggle && popup "$(mus)"
+    mpc toggle && pop "$(mus)"
 
 alt + BackSpace
-    mpc prev && mpc next && popup "$(mus)"
+    mpc prev && mpc next && pop "$(mus)"
 
 # }}}
 
-# popups {{{
+# pops {{{
 
 alt + a
-    popup "$(mus)"
+    pop "$(mus)"
 
 alt + s
-    popup "$(clk)    $(dat)"
+    pop "$(clk)    $(dat)"
 
 alt + d
-    popup "$(bat)    $(vol)"
+    pop "$(bat)    $(vol)"
 
 # }}}

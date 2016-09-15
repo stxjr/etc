@@ -28,5 +28,5 @@ mpd &
 # wm
 sxhkd &
 wrk -i &
-wew | evwatch &
+evwatch &
 exec none
