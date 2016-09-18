@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/sxthe/bin'
-let g:netrw_dirhist_2='/home/sxthe/src/web'
-let g:netrw_dirhist_3='/home/sxthe'
-let g:netrw_dirhist_4='/home/sxthe/.config/youtube-dlg'
