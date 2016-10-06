@@ -1,6 +1,6 @@
 " init.vim
 
-source ~/.config/nvim/ligatures.vim
+source ~/src/pkg/yuki/ligatures.vim
 
 " plugins {{{
 
@@ -51,7 +51,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " colors {{{
 
 " set colorscheme
-colorscheme kuro
+colorscheme shiro
 
 " use color coded syntax
 syntax enable
@@ -64,7 +64,7 @@ syntax enable
 set noruler
 
 " enable line numbers
-" set number
+set number
 
 " highlight search as characters are typed
 set incsearch
@@ -115,6 +115,8 @@ nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
 
+nnoremap <leader>m :silent !mdk %<CR>
+
 nnoremap <leader>j :tabnext<CR>
 nnoremap <leader>k :tabprevious<CR>
 
@@ -148,6 +150,9 @@ map k gk
 
 " autocommands {{{
 
+au BufWritePost *.md silent !mdk %
+au BufNewFile,BufRead *.md WM
+
 " no auto comment
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -156,9 +161,28 @@ au FileType make setlocal noexpandtab
 
 " au filetype c setlocal number
 
-" auto skeletons
+" auto skeleton
 au BufNewFile *.c 0r ~/.config/nvim/c.skel
-au BufNewFile *.html 0r ~/.config/nvim/html.skel
+
+" }}}
+
+" funcs {{{
+
+func! WordProcessorMode() 
+  setlocal wrap 
+  setlocal linebreak 
+  setlocal nonumber
+  setlocal nocursorline
+endfu 
+com! WM call WordProcessorMode()
+
+func! ProgrammingMode()
+    setlocal nowrap
+    setlocal nolinebreak
+    setlocal number
+    setlocal cursorline
+endfu
+com! PM call ProgrammingMode()
 
 " }}}
 

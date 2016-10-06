@@ -7,8 +7,6 @@ complete -c man which
 complete -cf sudo
 complete -d cd
 
-eval "$(pandoc --bash-completion)"
-
 # auto cd
 shopt -s autocd
 
@@ -22,7 +20,7 @@ export HISTCONTROL=ignoredups:erasedups
 # append to history
 shopt -s histappend
 
-PATH="$PATH:/home/sxthe/bin:/home/sxthe/bin/wmtls"
+PATH="$PATH:/home/sxthe/bin:/home/sxthe/bin/wmt"
 
 # source files
 for config in $HOME/.sh.d/*; do

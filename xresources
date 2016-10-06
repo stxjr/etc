@@ -1,9 +1,9 @@
-#include ".colors/shiro"
+#include ".colors/dusty"
 
 ! template for colors {{{
 *.foreground:   blk
 *.background:   bg
-*.cursorColor:  wht
+*.cursorColor:  lgry
 
 ! black
 *.color0:       blk

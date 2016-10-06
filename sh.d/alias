@@ -14,6 +14,7 @@ alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'
 alias f='$EDITOR -c ":CtrlPMixed"'
+alias c='cd'
 
 # options
 alias cmat='cmatrix -C red -an'

@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/sxthe/src/web'
+let g:netrw_dirhist_2='/home/sxthe/src'
+let g:netrw_dirhist_3='/home/sxthe'
+let g:netrw_dirhist_4='/home/sxthe/etc'
+let g:netrw_dirhist_5='/home/sxthe/etc/nvim'
+let g:netrw_dirhist_6='/home/sxthe/src/web'
+let g:netrw_dirhist_7='/home/sxthe/usr/doc/txt/killer-angels'
+let g:netrw_dirhist_8='/usr/share/nvim/runtime/doc'

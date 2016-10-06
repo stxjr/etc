@@ -5,9 +5,9 @@
 #define bg      #222222
 
 #define blk     #888888
-#define acc     #2e7373
+#define acc     #772f36
 #define dgry    #666666
 #define lgry    #555555
-#define wht     #333333
+#define wht     #292929
 
 ! vim: ft=xdefaults

@@ -1,5 +1,5 @@
 " kuro
-" by sythe
+" by sxthe
 
 set background=dark
 hi clear
@@ -10,18 +10,16 @@ endif
 
 let colors_name = "kuro"
 
-let g:limelight_conceal_ctermfg = 7
-
 " ui highlighting {{{
 
 hi Normal                 cterm=none             ctermbg=none  ctermfg=3
 hi ColorColumn            cterm=none             ctermbg=7     ctermfg=none
 hi Cursor                 cterm=none             ctermbg=none  ctermfg=3
-hi CursorLine             cterm=none             ctermbg=none  ctermfg=none
-hi CursorLineNr           cterm=none             ctermbg=none  ctermfg=1
+hi CursorLine             cterm=none             ctermbg=7     ctermfg=none
+hi CursorLineNr           cterm=none             ctermbg=7     ctermfg=1
 hi LineNr                 cterm=none             ctermbg=none  ctermfg=7
 hi Pmenu                  cterm=none             ctermbg=7     ctermfg=1
-hi CursorColumn           cterm=none             ctermbg=none  ctermfg=none
+hi CursorColumn           cterm=none             ctermbg=7     ctermfg=none
 hi SignColumn             cterm=none             ctermbg=none  ctermfg=none
 hi Conceal                cterm=none             ctermbg=none  ctermfg=1
 hi DiffAdd                cterm=none             ctermbg=2     ctermfg=none
@@ -46,16 +44,6 @@ hi TabLine                cterm=none             ctermbg=7     ctermfg=none
 hi TabLineFill            cterm=none             ctermbg=7     ctermfg=none
 hi TabLineSel             cterm=none             ctermbg=7     ctermfg=1
 hi MatchParen             cterm=none             ctermbg=none  ctermfg=1
-
-" }}}
-
-" custom colors for statusbar {{{
-
-hi User1                  cterm=none             ctermbg=7     ctermfg=1
-hi User2                  cterm=none             ctermbg=7   ctermfg=1
-
-au InsertEnter * highlight User2 cterm=reverse ctermbg=7 ctermfg=1
-au InsertLeave * highlight User2 cterm=none    ctermbg=7 ctermfg=1
 
 " }}}
 

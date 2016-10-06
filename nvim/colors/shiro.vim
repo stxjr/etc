@@ -15,10 +15,10 @@ let colors_name = "shiro"
 hi Normal                 cterm=none             ctermbg=none  ctermfg=3
 hi ColorColumn            cterm=none             ctermbg=7     ctermfg=none
 hi Cursor                 cterm=none             ctermbg=none  ctermfg=3
-hi CursorLine             cterm=none             ctermbg=none  ctermfg=none
-hi CursorLineNr           cterm=none             ctermbg=none  ctermfg=5
-hi LineNr                 cterm=none             ctermbg=none  ctermfg=7
-hi Pmenu                  cterm=none             ctermbg=252   ctermfg=1
+hi CursorLine             cterm=none             ctermbg=7     ctermfg=none
+hi CursorLineNr           cterm=none             ctermbg=7     ctermfg=5
+hi LineNr                 cterm=none             ctermbg=none  ctermfg=5
+hi Pmenu                  cterm=none             ctermbg=7     ctermfg=1
 hi CursorColumn           cterm=none             ctermbg=none  ctermfg=none
 hi SignColumn             cterm=none             ctermbg=none  ctermfg=none
 hi Conceal                cterm=none             ctermbg=none  ctermfg=1
@@ -38,22 +38,12 @@ hi Title                  cterm=none             ctermbg=none  ctermfg=none
 hi NonText                cterm=none             ctermbg=none  ctermfg=7
 hi SpellBad               cterm=none             ctermbg=none  ctermfg=none
 hi SpellCap               cterm=none             ctermbg=none  ctermfg=none
-hi StatusLine             cterm=none             ctermbg=7     ctermfg=7
-hi StatusLineNC           cterm=none             ctermbg=7     ctermfg=7
+hi StatusLine             cterm=none             ctermbg=7     ctermfg=1
+hi StatusLineNC           cterm=none             ctermbg=7     ctermfg=1
 hi TabLine                cterm=none             ctermbg=7     ctermfg=none
 hi TabLineFill            cterm=none             ctermbg=7     ctermfg=none
 hi TabLineSel             cterm=none             ctermbg=7     ctermfg=1
 hi MatchParen             cterm=none             ctermbg=none  ctermfg=none
-
-" }}}
-
-" custom colors {{{
-
-hi User1                  cterm=none             ctermbg=7     ctermfg=1
-hi User2                  cterm=none             ctermbg=252   ctermfg=1
-
-au InsertEnter * highlight User2 cterm=reverse ctermbg=252 ctermfg=1
-au InsertLeave * highlight User2 cterm=none    ctermbg=252 ctermfg=1
 
 " }}}
 
