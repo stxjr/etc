@@ -15,6 +15,7 @@ alias p="pwd | sed \"s:$HOME:~:g\""
 alias e='$EDITOR'
 alias f='$EDITOR -c ":CtrlPMixed"'
 alias c='cd'
+alias ayy='echo lmao'
 
 # options
 alias cmat='cmatrix -C red -an'
@@ -27,8 +28,29 @@ alias gc='git commit -m'
 alias gp='git push -u origin master'
 alias gt='git add . && git commit && git push -u origin master'
 
+# tar
+tc()
+{
+    dest=$(echo "$1" | sed 's:/$::')
+
+    tar cvfz ${dest}.tar.gz ${dest}
+}
+
+tx()
+{
+    tar xvfz ${1}.tar.gz
+}
+
+ym()
+{
+    youtube-dl -x --audio-format mp3 $@
+}
+
 # sudo works with aliases
 alias sudo='sudo '
+
+# speed test
+alias bt='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 
 # auto compile fonts
 autofont()
@@ -68,7 +90,8 @@ src()
         shell|sh|s)
             source ~/.bashrc ;;
         xrdb|x)
-            xrdb ~/.xresources ;;
+            xrdb ~/.xresources
+            ;;
         2bwm|2)
             prev=$(pwd) && \
             cd ~/src/pkg/twobwm && \

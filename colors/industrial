@@ -1,0 +1,13 @@
+! industrial
+! light bg, orange tint
+! by sxthe
+
+#define bg      #e6e0d8
+
+#define blk     #706c66
+#define acc     #c78831
+#define dgry    #8c867d
+#define lgry    #a39e96
+#define wht     #ded6cc
+
+! vim: ft=xdefaults

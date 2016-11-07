@@ -1,0 +1,13 @@
+! fern
+! light bg, green tint
+! by sxthe
+
+#define bg      #d8d8d8
+
+#define blk     #666666
+#define acc     #7b9432
+#define dgry    #888888
+#define lgry    #999999
+#define wht     #cccccc
+
+! vim: ft=xdefaults

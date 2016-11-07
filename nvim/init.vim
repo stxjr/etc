@@ -151,7 +151,7 @@ map k gk
 " autocommands {{{
 
 au BufWritePost *.md silent !mdk %
-au BufNewFile,BufRead *.md WM
+au BufNewFile,BufRead *.md Wordmode
 
 " no auto comment
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -174,7 +174,7 @@ func! WordProcessorMode()
   setlocal nonumber
   setlocal nocursorline
 endfu 
-com! WM call WordProcessorMode()
+com! Wordmode call WordProcessorMode()
 
 func! ProgrammingMode()
     setlocal nowrap

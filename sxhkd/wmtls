@@ -108,9 +108,15 @@ alt + a
     pop "$(mus)"
 
 alt + s
-    pop "$(bat)"
+    pop "$(clk)"
 
 alt + d
+    pop "$(dat)"
+
+alt + ctrl + a
     pop "$(vol)"
+
+alt + ctrl + s
+    pop "$(bat)"
 
 # }}}
