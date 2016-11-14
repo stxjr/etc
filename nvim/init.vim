@@ -115,7 +115,7 @@ nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
 
-nnoremap <leader>m :silent !mdk %<CR>
+nnoremap <leader>m :silent !mdc %<CR>
 
 nnoremap <leader>j :tabnext<CR>
 nnoremap <leader>k :tabprevious<CR>

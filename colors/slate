@@ -4,9 +4,9 @@
 
 #define bg      #1b1e21
 
-#define blk     #808077
+#define blk     #778080
 #define acc     #4c5e60
-#define dgry    #6a6d6b
+#define dgry    #6a6b6d
 #define lgry    #525655
 #define wht     #222628
 

@@ -11,8 +11,8 @@ complete -d cd
 shopt -s autocd
 
 # give some room
-HISTSIZE=10000
-HISTFILESIZE=10000
+HISTSIZE=100000
+HISTFILESIZE=100000
 
 # no duplicates in history
 export HISTCONTROL=ignoredups:erasedups
