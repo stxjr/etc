@@ -1,0 +1,36 @@
+! template for 5-color colorscheme
+*.foreground:   blk
+*.background:   bg
+*.cursorColor:  lgry
+
+! black
+*.color0:       blk
+*.color8:       blk
+
+! accent
+*.color1:       acc
+*.color9:       acc
+
+! accent
+*.color2:       acc
+*.color10:      acc
+
+! dgrey
+*.color3:       dgry
+*.color11:      dgry
+
+! dgrey
+*.color4:       dgry
+*.color12:      dgry
+
+! lgrey
+*.color5:       lgry
+*.color13:      lgry
+
+! lgrey
+*.color6:       lgry
+*.color14:      lgry
+
+! white
+*.color7:       wht
+*.color15:      wht

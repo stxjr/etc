@@ -20,7 +20,7 @@ export HISTCONTROL=ignoredups:erasedups
 # append to history
 shopt -s histappend
 
-PATH="$PATH:/home/sxthe/bin:/home/sxthe/bin/wmt"
+PATH="$PATH:/home/sxthe/bin:/home/sxthe/bin/wmt:/home/sxthe/bin/bar"
 
 # source files
 for config in $HOME/.sh.d/*; do

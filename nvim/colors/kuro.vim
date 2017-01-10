@@ -28,6 +28,7 @@ hi DiffChange             cterm=none             ctermbg=2     ctermfg=none
 hi DiffText               cterm=none             ctermbg=2     ctermfg=none
 hi Directory              cterm=none             ctermbg=none  ctermfg=1
 hi ErrorMsg               cterm=bold             ctermbg=none  ctermfg=1
+hi WarningMsg             cterm=bold             ctermbg=none  ctermfg=1
 hi Folded                 cterm=none             ctermbg=none  ctermfg=5
 hi FoldColumn             cterm=none             ctermbg=none  ctermfg=5
 hi IncSearch              cterm=none             ctermbg=7     ctermfg=none
@@ -35,7 +36,7 @@ hi Search                 cterm=none             ctermbg=none  ctermfg=none
 hi VertSplit              cterm=none             ctermbg=7     ctermfg=7  
 hi Visual                 cterm=none             ctermbg=7     ctermfg=none
 hi Title                  cterm=none             ctermbg=none  ctermfg=none
-hi NonText                cterm=none             ctermbg=none  ctermfg=5
+hi NonText                cterm=none             ctermbg=none  ctermfg=235
 hi SpellBad               cterm=none             ctermbg=none  ctermfg=none
 hi SpellCap               cterm=none             ctermbg=none  ctermfg=none
 hi StatusLine             cterm=none             ctermbg=7     ctermfg=1
@@ -46,6 +47,12 @@ hi TabLineSel             cterm=none             ctermbg=7     ctermfg=1
 hi MatchParen             cterm=none             ctermbg=none  ctermfg=1
 
 " }}}
+
+hi StartifyPath           cterm=none             ctermbg=none  ctermfg=5
+hi StartifySlash          cterm=none             ctermbg=none  ctermfg=5
+hi StartifySpecial        cterm=none             ctermbg=none  ctermfg=1 
+hi StartifyBracket        cterm=none             ctermbg=none  ctermfg=5
+hi StartifyNumber         cterm=none             ctermbg=none  ctermfg=1
 
 " syntax highlighting {{{
 

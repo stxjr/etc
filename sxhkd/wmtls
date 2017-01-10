@@ -1,21 +1,21 @@
 # wmtls
 
 alt + Escape
-    pkill -USR1 sxhkd
+    pkill -USR1 sxhkd && xrdb ~/.xresources
 
 alt + shift + ctrl + c
-    pkill none
+    pkill xwt
 
 # launch {{{
 
-alt + Return
-    urxvt
+alt + {_,ctrl + ,shift + }Return
+    urxvt {-g 66x15,-g 80x24,-g 150x40}
 
 alt + r
     run
 
-alt + {_,shift + }z
-    chromium {_, --incognito}
+alt + {_,ctrl + }d
+    firefox {_, --private-window}
 
 # take a scrot
 alt + Print
@@ -31,14 +31,21 @@ alt + shift + c
 alt + f
     max $(pfw)
 
+alt + ctrl + f
+    chwb -s 0 $(pfw) && \
+    wtp 0 0 1366 768 $(pfw)
+
 alt + {_,shift + }Tab
     fcs {next, prev}
 
-alt + {1,2,3,4,bracketleft,bracketright}
+alt + {1,2,3,4,comma,period}
     wrk -g {0,1,2,3,4,5}
 
-alt + shift + {1,2,3,4,bracketleft,bracketright}
+alt + ctrl + {1,2,3,4,comma,period}
     wrk -m {0,1,2,3,4,5}
+
+alt + ctrl + {q,w,e}
+    xbacklight -set {10,30,70}
 
 # }}}
 
@@ -56,30 +63,30 @@ alt + shift + {h,j,k,l}
 alt + shift + ctrl + {h,j,k,l}
     wrs {-10 0, 0 10, 0 -10, 10 0} $(pfw)
 
-alt + {y,u,i,o,g,p,b,n,m}
+alt + {t,y,u,i,o,p,b,n,m}
     cnr {tl,tm,tr,ml,mm,mr,bl,bm,br}
 
 # }}}
 
 # presets {{{
 
+# alt + q
+#     wtp 464 278 430 225 $(pfw) && cnr mm $(pfw)
+# 
+# alt + w
+#     wtp 464 154 430 472 $(pfw) && cnr mm $(pfw)
+# 
+# alt + e
+#     wtp 464 30 430 720 $(pfw) && cnr mm $(pfw)
+
 alt + q
-    wtp 465 263 430 237 $(pfw)
+    wtp 466 278 426 225 $(pfw) 
 
 alt + w
-    wtp 465 137 430 489 $(pfw)
+    wtp 424 219 510 342 $(pfw) 
 
 alt + e
-    wtp 465 10 430 742 $(pfw)
-
-# alt + ctrl + a
-#     wtp 465 137 430 489 $(pfw)
-# 
-# alt + ctrl + s
-#     wtp 465 52 430 658 $(pfw)
-# 
-# alt + ctrl + d
-#     wtp 465 10 430 742 $(pfw)
+    wtp 214 115 930 550 $(pfw) 
 
 # }}}
 
@@ -87,36 +94,35 @@ alt + e
 
 # volume
 alt + F{7,8}
-    amixer -q sset Master 5%{-,+} unmute && \
-        pop "$(vol)"
+    amixer -q sset Master 5%{-,+} unmute
 
 # music
 alt + F{9,11}
-    mpc {prev,next} && pop "$(mus)"
+    mpc {prev,next}
 
 alt + F10
-    mpc toggle && pop "$(mus)"
+    mpc toggle
 
 alt + BackSpace
-    mpc prev && mpc next && pop "$(mus)"
+    mpc prev && mpc next
 
 # }}}
 
 # pops {{{
 
-alt + a
-    pop "$(mus)"
-
-alt + s
-    pop "$(clk)"
-
-alt + d
-    pop "$(dat)"
-
-alt + ctrl + a
-    pop "$(vol)"
-
-alt + ctrl + s
-    pop "$(bat)"
+# alt + a
+#     pop $(mus)
+# 
+# alt + s
+#     pop $(clk)
+# 
+# alt + d
+#     pop $(dat)
+# 
+# alt + ctrl + a
+#     pop $(vol)
+# 
+# alt + ctrl + s
+#     pop $(bat)
 
 # }}}

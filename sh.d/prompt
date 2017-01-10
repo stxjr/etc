@@ -3,18 +3,15 @@
 
 _dir()
 {
-    # replace $HOME with nothing (don't show anything)
-    currentdir=${PWD/$HOME/}
-
-    test -n currentdir && printf "$(basename 2>/dev/null "$currentdir")"
+    printf "$(basename 2>/dev/null $(pwd | sed 's:/home/sxthe:~:'))"
 }
 
 _col()
 {
     case $? in
-        0) printf "$(tput setaf 1)" ;;
-        *) printf "$(tput setaf 7)" ;;
+        0) printf "$(tput setaf 1)$(tput setab 7)" ;;
+        *) printf "$(tput setaf 7)$(tput setab 1)" ;;
     esac
 }
 
-PS1='\[$(_col)\]$(_dir);\[$(tput sgr0)\] '
+PS1='\[$(_col)\] $(_dir) » \[$(tput sgr0)\] '

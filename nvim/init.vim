@@ -1,25 +1,20 @@
 " init.vim
 
-source ~/src/pkg/yuki/ligatures.vim
-
 " plugins {{{
 
 call plug#begin('~/.config/nvim/plugged')
 
-" paren/quote matching
-Plug 'jiangmiao/auto-pairs'
-
 " fuzzy file finder
 Plug 'ctrlpvim/ctrlp.vim'
 
-" better file manager
-Plug 'tpope/vim-vinegar'
+" paren/quote matching
+Plug 'jiangmiao/auto-pairs'
+
+" nice startpage
+Plug 'mhinz/vim-startify'
 
 " tab completion
 Plug 'ajh17/vimcompletesme'
-
-" haskell
-Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
 
@@ -27,31 +22,55 @@ call plug#end()
 
 " plugin options {{{
 
-" ctrlp automatically opens in new tab
-let g:ctrlp_prompt_mappings = {
-            \ 'AcceptSelection("e")': ['<c-t>'],
-            \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-            \ }
-
-" close ctrlp's extra tabs
-function! CloseEmptyTab()
-    " If the buffer does not have a file loaded
-    if (len(expand('%:t')) == 0)
-        :quit
-    end
-endfunction
-
-au TabEnter * :call CloseEmptyTab()
-
 " vinegar doesn't show hidden files by default
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:60,results:60'
+
+" startify has recent files
+set viminfo='100,n$HOME/.config/nvim/files/info/viminfo
+
+let g:startify_relative_path       = 1
+let g:startify_files_number        = 10
+let g:startify_enable_special      = 0
+let g:startify_change_to_dir       = 1
+let g:startify_session_persistence = 0
+
+let g:startify_bookmarks = [
+            \ {'c': '~/usr/doc/conlang/vocab.md'},
+            \ {'n': '~/usr/doc/conlang/notes.md'},
+            \ {'i': '~/.config/nvim/init.vim'},
+            \ {'s': '~/.sh.d/alias'},
+            \ ]
+
+let g:startify_commands = [
+            \ {'f': ['<find file>', 'CtrlPMixed']},
+            \ ]
+
+let g:startify_list_order = [
+            \ 'files',
+            \ 'bookmarks',
+            \ 'commands',
+            \ ]
+
+function! StartifyTabTrigger()
+  let line = line('.')
+  tabedit %
+  execute line
+  call startify#open_buffers()
+endfunction
+
+autocmd User Startified nnoremap <buffer><cr> :call StartifyTabTrigger()<cr>
+
+let g:startify_custom_header = []
+
 
 " }}}
 
 " colors {{{
 
 " set colorscheme
-colorscheme shiro
+colorscheme kuro
 
 " use color coded syntax
 syntax enable
@@ -63,8 +82,11 @@ syntax enable
 " no ruler
 set noruler
 
-" enable line numbers
-set number
+" disable line numbers
+set nonumber
+
+" no tab line
+set showtabline=0
 
 " highlight search as characters are typed
 set incsearch
@@ -77,7 +99,7 @@ set shortmess+=I
 
 " statusbar
 set laststatus=0
- 
+
 " set statusline=%2*\ %f\ %1*
 " set statusline+=\ %m
 " set statusline+=%=
@@ -108,9 +130,6 @@ set tabstop=4
 " leader (for custom commands) is space
 let mapleader = "\<space>"
 
-nnoremap <leader><leader> :CtrlPMixed<CR>
-nnoremap <leader>l :Limelight!!<CR>
-
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
@@ -122,6 +141,8 @@ nnoremap <leader>k :tabprevious<CR>
 
 " enter clears search
 " nnoremap <CR> :noh<CR><CR>:<backspace>
+
+nnoremap <C-d> :q<CR>
 
 " hjkl
 noremap <Up> <NOP>
@@ -150,7 +171,6 @@ map k gk
 
 " autocommands {{{
 
-au BufWritePost *.md silent !mdk %
 au BufNewFile,BufRead *.md Wordmode
 
 " no auto comment
@@ -169,10 +189,10 @@ au BufNewFile *.c 0r ~/.config/nvim/c.skel
 " funcs {{{
 
 func! WordProcessorMode() 
-  setlocal wrap 
-  setlocal linebreak 
-  setlocal nonumber
-  setlocal nocursorline
+    setlocal wrap 
+    setlocal linebreak 
+    setlocal nonumber
+    setlocal nocursorline
 endfu 
 com! Wordmode call WordProcessorMode()
 
@@ -191,8 +211,10 @@ com! PM call ProgrammingMode()
 " auto indent
 filetype plugin indent on
 
-" turn logging off
-set viminfo=
+" no annoying swap files
+set nobackup
+set nowritebackup
+set noswapfile
 
 " turn mouse off
 set mouse=

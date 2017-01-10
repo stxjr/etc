@@ -1,11 +1,10 @@
 ! aether
-! light bg, blue-white tint, light teal fg
 ! by sxthe
 
-#define bg      #d7dbe5
+#define bg      #dadce2
 
 #define blk     #66706f
-#define acc     #548a8d
+#define acc     #476e81
 #define dgry    #7c898c
 #define lgry    #969ca3
 #define wht     #cbd0dd

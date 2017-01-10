@@ -1,11 +1,10 @@
 ! slate
-! dark bg, grey-blue tint
 ! by sxthe
 
-#define bg      #1b1e21
+#define bg      #1e2224
 
 #define blk     #778080
-#define acc     #4c5e60
+#define acc     #3c5756
 #define dgry    #6a6b6d
 #define lgry    #525655
 #define wht     #222628

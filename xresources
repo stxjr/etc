@@ -1,58 +1,5 @@
-#include ".colors/aether"
-
-! template for colors {{{
-*.foreground:   blk
-*.background:   bg
-*.cursorColor:  lgry
-
-! black
-*.color0:       blk
-*.color8:       blk
-
-! accent
-*.color1:       acc
-*.color9:       acc
-
-! accent
-*.color2:       acc
-*.color10:      acc
-
-! dgrey
-*.color3:       dgry
-*.color11:      dgry
-
-! dgrey
-*.color4:       dgry
-*.color12:      dgry
-
-! lgrey
-*.color5:       lgry
-*.color13:      lgry
-
-! lgrey
-*.color6:       lgry
-*.color14:      lgry
-
-! white
-*.color7:       wht
-*.color15:      wht
-
-! }}}
-
-! st {{{
-
-! font and line spacing
-st.font: yuki:pixelsize=9
-st.chscale: 1.2
-st.cwscale: 1.0
-
-! internal border
-st.borderpx: 15
-
-! cursor is a block
-st.cursorshape:  0
-
-! }}}
+#include ".colors/solstice"
+#include ".colors/tmp"
 
 ! urxvt {{{
 
@@ -69,7 +16,7 @@ urxvt.scrollBar: false
 urxvt*loginShell: false
 
 ! set the font
-urxvt.font: xft:yuki:pixelsize=8
+urxvt.font: xft:terra:pixelsize=12
 
 ! no bold fonts for you
 urxvt*boldFont: 
@@ -77,6 +24,6 @@ urxvt*italicFont:
 urxvt*bolditalicFont: 
 
 ! increase line spacing
-urxvt*lineSpace: 2
+urxvt*lineSpace: 1
 
 ! }}}
