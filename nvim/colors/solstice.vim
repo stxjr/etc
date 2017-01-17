@@ -1,4 +1,4 @@
-" kuro
+" solstice
 " by sxthe
 
 set background=dark
@@ -8,7 +8,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "kuro"
+let colors_name = "solstice"
 
 " ui highlighting {{{
 

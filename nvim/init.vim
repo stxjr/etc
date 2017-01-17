@@ -70,7 +70,7 @@ let g:startify_custom_header = []
 " colors {{{
 
 " set colorscheme
-colorscheme kuro
+colorscheme aether
 
 " use color coded syntax
 syntax enable

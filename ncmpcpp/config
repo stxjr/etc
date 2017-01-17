@@ -10,8 +10,8 @@ mouse_support = no
 titles_visibility = no
 
 # formats
-song_status_format = "{{$4%a × }$2%t}|{%f}"
-song_list_format = "{{$4%a × }$2%t $R$4%l }|{%f $R}"
+song_status_format = "{{$2%a $1≓ }$2%t}|{%f}"
+song_list_format = "{$2%t $R$1%a }|{%f $R}"
 alternative_header_second_line_format = "$1%a"
 media_library_primary_tag = artist
 now_playing_prefix = "$4 "

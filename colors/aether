@@ -1,12 +1,12 @@
 ! aether
 ! by sxthe
 
-#define bg      #dadce2
+#define bg      #dcdedd
 
-#define blk     #66706f
-#define acc     #476e81
-#define dgry    #7c898c
-#define lgry    #969ca3
-#define wht     #cbd0dd
+#define blk     #7a7979
+#define acc     #177688
+#define dgry    #8a8889
+#define lgry    #9b999a
+#define wht     #d2d4d3
 
 ! vim: ft=xdefaults

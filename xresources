@@ -1,4 +1,4 @@
-#include ".colors/solstice"
+#include ".colors/aether"
 #include ".colors/tmp"
 
 ! urxvt {{{

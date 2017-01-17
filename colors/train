@@ -1,0 +1,12 @@
+! train
+! by sxthe
+
+#define bg      #2c2a29
+
+#define blk     #8e8d87
+#define acc     #7d7a58
+#define dgry    #6e6d67
+#define lgry    #585749
+#define wht     #343330
+
+! vim: ft=xdefaults

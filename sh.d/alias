@@ -9,6 +9,7 @@ alias ll='ls -lh ${lsargs}'
 
 # shorteners
 alias n='ncmpcpp'
+alias g='git'
 alias r='ranger'
 alias i='dtach -A /tmp/irc-dtach weechat'
 alias p="pwd | sed \"s:$HOME:~:g\""
@@ -25,12 +26,8 @@ alias ....="cd ../../.."
 # options
 alias cmat='cmatrix -C red -an'
 alias screenf="screenfetch -c1,5 -d '-gpu'"
-
-# git git git
-alias ga='git add .'
-alias gc='git commit -m'
-alias gp='git push -u origin master'
-alias gt='git add . && git commit && git push -u origin master'
+alias ccr='ccrypt -k ~/.ccryptpass'
+alias snc='rclone sync $HOME/var/ sxthe:sxthebac'
 
 # sudo works with aliases
 alias sudo='sudo '
@@ -108,10 +105,4 @@ src()
             make && sudo make install && \
             cd $prev ;;
     esac
-}
-
-# just heck it all
-heck()
-{
-    sudo $(fc -nlr | sed 1q)
 }

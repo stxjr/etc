@@ -1,12 +1,12 @@
 ! solstice
 ! by sxthe
 
-#define bg      #232122
+#define bg      #212326
 
-#define blk     #7c7a7b
-#define acc     #527b68
-#define dgry    #6a6969
-#define lgry    #5a5859
-#define wht     #292728
+#define blk     #909087
+#define acc     #426b68
+#define dgry    #6a6d6b
+#define lgry    #525655
+#define wht     #282b2e
 
 ! vim: ft=xdefaults
