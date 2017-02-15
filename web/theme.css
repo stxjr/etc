@@ -18,11 +18,11 @@
 
 :root {
     /* TAB VARIABLES */
-    --bg-light: #dcdedd; --bg-dark: #dcdedd;
-    --fg-light: #177688; --fg-dark: #7a7979;
+    --bg-light: #253032; --bg-dark: #253032
+    --fg-light: #4c747d; --fg-dark: #8b8186;
     --tab-triangle-correction: 0px;
     --tab-height: 25px; --tab-icon-size: 15px; --tab-strip-margin: 0px; --tab-overlap: -5px;
-    --tab-fonts: terra; --tab-font-size: 10pt;
+    --tab-fonts: yuki; --tab-font-size: 10pt;
     --tab-text-align: center; /* left | center | right */
     --tab-triangle: none;  /* block | none */
 

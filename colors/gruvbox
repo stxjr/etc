@@ -1,0 +1,12 @@
+! gruvbox
+! by sxthe
+
+#define bg      #282828
+
+#define blk     #928374
+#define acc     #687d6a
+#define dgry    #665c54
+#define lgry    #504945
+#define wht     #333230
+
+! vim: ft=xdefaults

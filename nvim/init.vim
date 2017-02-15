@@ -4,28 +4,17 @@
 
 call plug#begin('~/.config/nvim/plugged')
 
-" fuzzy file finder
 Plug 'ctrlpvim/ctrlp.vim'
-
-" paren/quote matching
 Plug 'jiangmiao/auto-pairs'
-
-" nice startpage
 Plug 'mhinz/vim-startify'
-
-" tab completion
 Plug 'ajh17/vimcompletesme'
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
 " }}}
 
 " plugin options {{{
-
-" vinegar doesn't show hidden files by default
-let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:60,results:60'
 
 " startify has recent files
 set viminfo='100,n$HOME/.config/nvim/files/info/viminfo
@@ -36,9 +25,9 @@ let g:startify_enable_special      = 0
 let g:startify_change_to_dir       = 1
 let g:startify_session_persistence = 0
 
+
 let g:startify_bookmarks = [
             \ {'c': '~/usr/doc/conlang/vocab.md'},
-            \ {'n': '~/usr/doc/conlang/notes.md'},
             \ {'i': '~/.config/nvim/init.vim'},
             \ {'s': '~/.sh.d/alias'},
             \ ]
@@ -53,21 +42,15 @@ let g:startify_list_order = [
             \ 'commands',
             \ ]
 
-function! StartifyTabTrigger()
-  let line = line('.')
-  tabedit %
-  execute line
-  call startify#open_buffers()
-endfunction
+let g:startify_custom_header =
+            \ map(split(system('tdo'), '\n'), '" ". v:val')
 
-autocmd User Startified nnoremap <buffer><cr> :call StartifyTabTrigger()<cr>
-
-let g:startify_custom_header = []
-
+" use s to go to next match with vim-sneak
+let g:sneak#s_next = 1
 
 " }}}
 
-" colors {{{
+" ui changes {{{
 
 " set colorscheme
 colorscheme aether
@@ -75,15 +58,11 @@ colorscheme aether
 " use color coded syntax
 syntax enable
 
-" }}}
-
-" ui changes {{{
-
 " no ruler
 set noruler
 
-" disable line numbers
-set nonumber
+" enable line numbers
+set number
 
 " no tab line
 set showtabline=0
@@ -135,20 +114,6 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
 
 nnoremap <leader>m :silent !mdc %<CR>
-
-nnoremap <leader>j :tabnext<CR>
-nnoremap <leader>k :tabprevious<CR>
-
-" enter clears search
-" nnoremap <CR> :noh<CR><CR>:<backspace>
-
-nnoremap <C-d> :q<CR>
-
-" hjkl
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
 
 " map ; to :
 nnoremap ; :

@@ -27,3 +27,4 @@ for config in $HOME/.sh.d/*; do
     source $config
 done
 unset config
+export PATH="/home/sxthe/.cache/pacaur/sencha-cmd-6/src:$PATH"

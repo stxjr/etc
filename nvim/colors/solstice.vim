@@ -14,10 +14,10 @@ let colors_name = "solstice"
 
 hi Normal                 cterm=none             ctermbg=none  ctermfg=3
 hi ColorColumn            cterm=none             ctermbg=7     ctermfg=none
+hi LineNr                 cterm=none             ctermbg=none  ctermfg=5
 hi Cursor                 cterm=none             ctermbg=none  ctermfg=3
 hi CursorLine             cterm=none             ctermbg=7     ctermfg=none
 hi CursorLineNr           cterm=none             ctermbg=7     ctermfg=1
-hi LineNr                 cterm=none             ctermbg=none  ctermfg=7
 hi Pmenu                  cterm=none             ctermbg=7     ctermfg=1
 hi CursorColumn           cterm=none             ctermbg=7     ctermfg=none
 hi SignColumn             cterm=none             ctermbg=none  ctermfg=none
@@ -53,6 +53,7 @@ hi StartifySlash          cterm=none             ctermbg=none  ctermfg=5
 hi StartifySpecial        cterm=none             ctermbg=none  ctermfg=1 
 hi StartifyBracket        cterm=none             ctermbg=none  ctermfg=5
 hi StartifyNumber         cterm=none             ctermbg=none  ctermfg=1
+hi Sneak                  cterm=none             ctermbg=0     ctermfg=7
 
 " syntax highlighting {{{
 

@@ -1,0 +1,34 @@
+# simple config for any wm
+
+# reload sxhkd
+alt + Escape
+    pkill -USR1 -x sxhkd
+
+# spawn terminal
+alt + {_,shift + ,control + }Return
+    {urxvt,urxvt -g 66x15,urxvt -g 135x40}
+
+# program launcher
+alt + r
+    run
+
+# launch web browser
+alt + {_,shift + }s
+    firefox {_, --private-window}
+
+alt + d
+    $HOME/usr/var/discord/discord
+
+# volume
+alt + F{7,8}
+    amixer -q sset Master 5%{-,+} unmute
+
+# music
+alt + F{9,11}
+    mpc {prev,next}
+
+alt + F10
+    mpc toggle
+
+alt + BackSpace
+    mpc prev && mpc next

@@ -1,0 +1,12 @@
+! fire
+! by sxthe
+
+#define bg      #253032
+
+#define blk     #7b8186
+#define acc     #4c747d
+#define dgry    #5b6163
+#define lgry    #4e5352
+#define wht     #303a3b
+
+! vim: ft=xdefaults

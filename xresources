@@ -16,7 +16,7 @@ urxvt.scrollBar: false
 urxvt*loginShell: false
 
 ! set the font
-urxvt.font: xft:terra:pixelsize=12
+urxvt.font: xft:terra:pixelsize=12, '-*-siji-*-*-*-*-*-*-*-*-*-*-*-*'
 
 ! no bold fonts for you
 urxvt*boldFont: 
@@ -25,5 +25,23 @@ urxvt*bolditalicFont:
 
 ! increase line spacing
 urxvt*lineSpace: 1
+
+! }}}
+
+! twobwm {{{
+
+twobwm.enable_compton: true
+twobwm.focus_color: acc
+twobwm.unfocus_color: wht
+twobwm.fixed_color: blk
+twobwm.unkill_color: blk
+twobwm.outer_border_color: bg
+twobwm.fixed_unkill_color: blk
+
+! }}}
+
+! misc {{{
+
+emacs.font: terra-10
 
 ! }}}

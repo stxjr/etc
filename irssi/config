@@ -1,0 +1,37 @@
+statusbar = {
+  default = {
+    window = {
+      items = {
+      };
+    };
+  };
+};
+
+
+settings = {
+  core = { real_name = "forsythe"; user_name = "sxthe"; nick = "sxthe"; };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    theme = "cshrd.theme";
+    bell_beeps = "no";
+    timestamps = "yes";
+    completion_char = ",";
+  };
+};
+servers = (
+  {
+    address = "unix.chat";
+    chatnet = "unixchat";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs/";
+    autoconnect = "yes";
+  }
+);
+
+channels = ( 
+  { name = "#unix"; chatnet = "unixchat"; autojoin = "yes"; }
+);
+
+chatnets = { unixchat = { type = "IRC"; }; };
